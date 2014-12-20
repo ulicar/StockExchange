@@ -1,0 +1,2034 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <UnitTestResult>
+      <TestDate>2014-12-13T15:00:26</TestDate>
+      <Status />
+      <Passed>69</Passed>
+      <Errors>22</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>One or more child tests had errors</Message>
+    </UnitTestResult>
+  </Results>
+  <Tests>
+    <TestRecord Name="DrugaDomacaZadaca_Burza">
+      <Results>
+        <UnitTestResult>
+          <TestDate>2014-12-13T15:00:26</TestDate>
+          <Status />
+          <Passed>69</Passed>
+          <Errors>22</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>One or more child tests had errors</Message>
+        </UnitTestResult>
+      </Results>
+      <Tests>
+        <TestRecord Name="StockExchangeTests">
+          <Results>
+            <UnitTestResult>
+              <TestDate>2014-12-13T15:00:26</TestDate>
+              <Status />
+              <Passed>69</Passed>
+              <Errors>22</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>One or more child tests had errors</Message>
+            </UnitTestResult>
+          </Results>
+          <Tests>
+            <TestRecord Name="IllegalTypeNegative">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.02ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_AddStockToIndex_Complicated">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.01ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_AddStockToIndex_MoreIndices">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>DrugaDomacaZadaca_Burza.StockExchangeException : Exception of type 'DrugaDomacaZadaca_Burza.StockExchangeException' was thrown.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.getStockFromStockExchange (System.String inStockName) [0x0005f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:422 
+  at DrugaDomacaZadaca_Burza.StockExchange.AddStockToIndex (System.String inIndexName, System.String inStockName) [0x0000b] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:514 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_AddStockToIndex_MoreIndices () [0x00053] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:203 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_AddStockToIndex_NoIndex">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_AddStockToIndex_NoStock">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_AddStockToIndex_SameStock">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_AddStockToIndex_Simple">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.02ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_AddStockToIndex_Simple_A">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_AddStockToPortfolio_Complicated">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_AddStockToPortfolio_GreaterThenNumOfShares">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>DrugaDomacaZadaca_Burza.StockExchangeException : Exception of type 'DrugaDomacaZadaca_Burza.StockExchangeException' was thrown.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.getStockFromStockExchange (System.String inStockName) [0x0005f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:422 
+  at DrugaDomacaZadaca_Burza.StockExchange.AddStockToPortfolio (System.String inPortfolioID, System.String inStockName, Int32 numberOfShares) [0x0000b] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:576 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_AddStockToPortfolio_GreaterThenNumOfShares () [0x0003e] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:316 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_AddStockToPortfolio_MorePortfolios">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>DrugaDomacaZadaca_Burza.StockExchangeException : Exception of type 'DrugaDomacaZadaca_Burza.StockExchangeException' was thrown.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.getStockFromStockExchange (System.String inStockName) [0x0005f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:422 
+  at DrugaDomacaZadaca_Burza.StockExchange.AddStockToPortfolio (System.String inPortfolioID, System.String inStockName, Int32 numberOfShares) [0x0000b] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:576 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_AddStockToPortfolio_MorePortfolios () [0x00050] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:336 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_AddStockToPortfolio_NegativeNumberOfShares">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_AddStockToPortfolio_NoPortfolio">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_AddStockToPortfolio_NoStock">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_AddStockToPortfolio_SameStock">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.01ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_AddStockToPortfolio_SameStock_A">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_AddStockToPortfolio_Simple">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>DrugaDomacaZadaca_Burza.StockExchangeException : Exception of type 'DrugaDomacaZadaca_Burza.StockExchangeException' was thrown.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.getStockFromStockExchange (System.String inStockName) [0x0005f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:422 
+  at DrugaDomacaZadaca_Burza.StockExchange.AddStockToPortfolio (System.String inPortfolioID, System.String inStockName, Int32 numberOfShares) [0x0000b] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:576 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_AddStockToPortfolio_Simple () [0x0005f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:417 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_AddStockToPortfolios_GreaterThenNumOfShares">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>DrugaDomacaZadaca_Burza.StockExchangeException : Exception of type 'DrugaDomacaZadaca_Burza.StockExchangeException' was thrown.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.getStockFromStockExchange (System.String inStockName) [0x0005f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:422 
+  at DrugaDomacaZadaca_Burza.StockExchange.AddStockToPortfolio (System.String inPortfolioID, System.String inStockName, Int32 numberOfShares) [0x0000b] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:576 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_AddStockToPortfolios_GreaterThenNumOfShares () [0x00050] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:441 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_ComplicatedChanges_Values">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>DrugaDomacaZadaca_Burza.StockExchangeException : Exception of type 'DrugaDomacaZadaca_Burza.StockExchangeException' was thrown.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.getStockFromStockExchange (System.String inStockName) [0x0005f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:422 
+  at DrugaDomacaZadaca_Burza.StockExchange.AddStockToPortfolio (System.String inPortfolioID, System.String inStockName, Int32 numberOfShares) [0x0000b] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:576 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ComplicatedChanges_Values () [0x00050] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:468 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_CreateIndex_SameNameAlreadyExists">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_CreateIndex_SameNameAndTypeAlreadyExists">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_CreateIndex_SimilarNameAlreadyExists">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_CreateIndex_Simple">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_CreateIndex_Simple_A">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_CreateIPortfolio_Simple">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_CreatePortfolio_SameIdAlreadyExists">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_CreatePortfolio_SimilarNameAlreadyExists">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_DelistStock_EmptyStockExchange">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_DelistStock_EmptyStockExchange_A">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_DelistStock_NotExist">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_DelistStock_Simple">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetIndexValue_AfterDelistingStock">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>DrugaDomacaZadaca_Burza.StockExchangeException : Exception of type 'DrugaDomacaZadaca_Burza.StockExchangeException' was thrown.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.getStockFromStockExchange (System.String inStockName) [0x0005f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:422 
+  at DrugaDomacaZadaca_Burza.StockExchange.AddStockToPortfolio (System.String inPortfolioID, System.String inStockName, Int32 numberOfShares) [0x0000b] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:576 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_GetIndexValue_AfterDelistingStock () [0x0005f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:655 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetIndexValue_Average">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>DrugaDomacaZadaca_Burza.StockExchangeException : Exception of type 'DrugaDomacaZadaca_Burza.StockExchangeException' was thrown.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.getStockFromStockExchange (System.String inStockName) [0x0005f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:422 
+  at DrugaDomacaZadaca_Burza.StockExchange.AddStockToIndex (System.String inIndexName, System.String inStockName) [0x0000b] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:514 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_GetIndexValue_Average () [0x00075] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:681 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetIndexValue_AverageAfterDelistingStock">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>DrugaDomacaZadaca_Burza.StockExchangeException : Exception of type 'DrugaDomacaZadaca_Burza.StockExchangeException' was thrown.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.getStockFromStockExchange (System.String inStockName) [0x0005f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:422 
+  at DrugaDomacaZadaca_Burza.StockExchange.AddStockToIndex (System.String inIndexName, System.String inStockName) [0x0000b] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:514 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_GetIndexValue_AverageAfterDelistingStock () [0x00075] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:704 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetIndexValue_AverageAfterPriceChange">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>DrugaDomacaZadaca_Burza.StockExchangeException : Exception of type 'DrugaDomacaZadaca_Burza.StockExchangeException' was thrown.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.getStockFromStockExchange (System.String inStockName) [0x0005f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:422 
+  at DrugaDomacaZadaca_Burza.StockExchange.AddStockToIndex (System.String inIndexName, System.String inStockName) [0x0000b] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:514 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_GetIndexValue_AverageAfterPriceChange () [0x0007b] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:728 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetIndexValue_AverageAfterRemovingStock">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>DrugaDomacaZadaca_Burza.StockExchangeException : Exception of type 'DrugaDomacaZadaca_Burza.StockExchangeException' was thrown.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.getStockFromStockExchange (System.String inStockName) [0x0005f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:422 
+  at DrugaDomacaZadaca_Burza.StockExchange.AddStockToIndex (System.String inIndexName, System.String inStockName) [0x0000b] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:514 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_GetIndexValue_AverageAfterRemovingStock () [0x00075] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:754 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetIndexValue_Begining">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.01ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetIndexValue_Weighted">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.04ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetIndexValue_Weighted_A">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetIndexValue_WeightedDecimal">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>DrugaDomacaZadaca_Burza.StockExchangeException : Exception of type 'DrugaDomacaZadaca_Burza.StockExchangeException' was thrown.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.getStockFromStockExchange (System.String inStockName) [0x0005f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:422 
+  at DrugaDomacaZadaca_Burza.StockExchange.AddStockToIndex (System.String inIndexName, System.String inStockName) [0x0000b] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:514 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_GetIndexValue_WeightedDecimal () [0x00073] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:814 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetInitialStockPrice_RandomPrices">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetLastStockPrice_RandomPrices">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetPortfolioPercentChangeInValueForMonth_Complicated">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>DrugaDomacaZadaca_Burza.StockExchangeException : Exception of type 'DrugaDomacaZadaca_Burza.StockExchangeException' was thrown.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.getStockFromStockExchange (System.String inStockName) [0x0005f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:422 
+  at DrugaDomacaZadaca_Burza.StockExchange.AddStockToPortfolio (System.String inPortfolioID, System.String inStockName, Int32 numberOfShares) [0x0000b] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:576 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_GetPortfolioPercentChangeInValueForMonth_Complicated () [0x00075] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:866 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetPortfolioPercentChangeInValueForMonth_InitialPrices">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>DrugaDomacaZadaca_Burza.StockExchangeException : Exception of type 'DrugaDomacaZadaca_Burza.StockExchangeException' was thrown.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.getStockFromStockExchange (System.String inStockName) [0x0005f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:422 
+  at DrugaDomacaZadaca_Burza.StockExchange.AddStockToPortfolio (System.String inPortfolioID, System.String inStockName, Int32 numberOfShares) [0x0000b] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:576 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_GetPortfolioPercentChangeInValueForMonth_InitialPrices () [0x00079] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:885 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetPortfolioPercentChangeInValueForMonth_PriceChanges">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>DrugaDomacaZadaca_Burza.StockExchangeException : Exception of type 'DrugaDomacaZadaca_Burza.StockExchangeException' was thrown.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x0004c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:382 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_GetPortfolioPercentChangeInValueForMonth_PriceChanges () [0x0005a] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:901 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetPortfolioPercentChangeInValueForMonth_Simple">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>DrugaDomacaZadaca_Burza.StockExchangeException : Exception of type 'DrugaDomacaZadaca_Burza.StockExchangeException' was thrown.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.getStockFromStockExchange (System.String inStockName) [0x0005f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:422 
+  at DrugaDomacaZadaca_Burza.StockExchange.AddStockToPortfolio (System.String inPortfolioID, System.String inStockName, Int32 numberOfShares) [0x0000b] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:576 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_GetPortfolioPercentChangeInValueForMonth_Simple () [0x00073] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:941 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetPortfolioPercentChangeInValueForMonth_WrongDate">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetPortfolioValue_AfterPriceChange">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>DrugaDomacaZadaca_Burza.StockExchangeException : Exception of type 'DrugaDomacaZadaca_Burza.StockExchangeException' was thrown.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.getStockFromStockExchange (System.String inStockName) [0x0005f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:422 
+  at DrugaDomacaZadaca_Burza.StockExchange.AddStockToPortfolio (System.String inPortfolioID, System.String inStockName, Int32 numberOfShares) [0x0000b] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:576 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_GetPortfolioValue_AfterPriceChange () [0x0004c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:976 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetPortfolioValue_AfterRemovingStock">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>DrugaDomacaZadaca_Burza.StockExchangeException : Exception of type 'DrugaDomacaZadaca_Burza.StockExchangeException' was thrown.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.getStockFromStockExchange (System.String inStockName) [0x0005f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:422 
+  at DrugaDomacaZadaca_Burza.StockExchange.AddStockToPortfolio (System.String inPortfolioID, System.String inStockName, Int32 numberOfShares) [0x0000b] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:576 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_GetPortfolioValue_AfterRemovingStock () [0x0007b] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:998 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetPortfolioValue_Begining">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetPortfolioValue_Sum">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>DrugaDomacaZadaca_Burza.StockExchangeException : Exception of type 'DrugaDomacaZadaca_Burza.StockExchangeException' was thrown.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.getStockFromStockExchange (System.String inStockName) [0x0005f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:422 
+  at DrugaDomacaZadaca_Burza.StockExchange.AddStockToPortfolio (System.String inPortfolioID, System.String inStockName, Int32 numberOfShares) [0x0000b] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:576 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_GetPortfolioValue_Sum () [0x0007b] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:1032 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetStockPrice_BeforeAlPrices">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetStockPrice_BeforeAlPrices_A">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetStockPrice_InitialPrice">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetStockPrice_LastPrice">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetStockPrice_MorePrices">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetStockPrice_MorePrices_A">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_GetStockPrice_SimilarName">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_ListStock_IllegalNumberOfSharesNegative">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_ListStock_IllegalNumberOfSharesNull">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_ListStock_IllegalPriceNegative">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_ListStock_IllegalPriceNegative_A">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_ListStock_IllegalPriceNull">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_ListStock_SameName">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_ListStock_SameNameAlreadyExists">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_ListStock_SameNameAlreadyExists_A">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_ListStock_SimilarNameAlreadyExists">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_ListStock_Simple">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_ListStock_Simple_A">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_NumberOfStocksInIndex_NoStocks">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_NumberOfStocksInPortfolio_NoStocks">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_RemoveStockFromIndex_MoreIndices">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_RemoveStockFromIndex_NonExistingIndex">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_RemoveStockFromIndex_NonExistingStock">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_RemoveStockFromIndex_Twice">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_RemoveStockFromPortfolio_All">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>DrugaDomacaZadaca_Burza.StockExchangeException : Exception of type 'DrugaDomacaZadaca_Burza.StockExchangeException' was thrown.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.getPortfolioFromStockExchange (System.String inPortfolioName) [0x0005a] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:440 
+  at DrugaDomacaZadaca_Burza.StockExchange.AddStockToPortfolio (System.String inPortfolioID, System.String inStockName, Int32 numberOfShares) [0x00003] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:575 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_RemoveStockFromPortfolio_All () [0x00035] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:1324 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_RemoveStockFromPortfolio_AllTwice">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_RemoveStockFromPortfolio_NonExistingPortfolio">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_RemoveStockFromPortfolio_NonExistingStock">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_RemoveStockFromPortfolio_NumOfShares">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_RemoveStockFromPortfolio_NumOfShares_A">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_RemoveStockFromPortfolio_Simple">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>DrugaDomacaZadaca_Burza.StockExchangeException : Exception of type 'DrugaDomacaZadaca_Burza.StockExchangeException' was thrown.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.getStockFromStockExchange (System.String inStockName) [0x0005f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:422 
+  at DrugaDomacaZadaca_Burza.StockExchange.AddStockToPortfolio (System.String inPortfolioID, System.String inStockName, Int32 numberOfShares) [0x0000b] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:576 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_RemoveStockFromPortfolio_Simple () [0x0003e] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:1408 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_RemoveStockFromPortfolio_Twice">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>DrugaDomacaZadaca_Burza.StockExchangeException : Exception of type 'DrugaDomacaZadaca_Burza.StockExchangeException' was thrown.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.getStockFromStockExchange (System.String inStockName) [0x0005f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:422 
+  at DrugaDomacaZadaca_Burza.StockExchange.AddStockToPortfolio (System.String inPortfolioID, System.String inStockName, Int32 numberOfShares) [0x0000b] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:576 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_RemoveStockFromPortfolio_Twice () [0x0003e] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:1429 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_SetStockPrice_DifferentName">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_SetStockPrice_NewPrice">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_SetStockPrice_NewPrice_A">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_SetStockPrice_SameTimeStamp">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_SetStockPrice_SimilarName">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_SetStockPrice_StockNotExists">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_StockExchangeAtTheBeginig">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="Test_StockExchangeAtTheBeginig_A">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-13T15:00:26</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+      </Tests>
+    </TestRecord>
+  </Tests>
+</TestRecord>

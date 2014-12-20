@@ -1,0 +1,2169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <UnitTestResult>
+      <TestDate>2014-12-09T18:09:53</TestDate>
+      <Status />
+      <Passed>0</Passed>
+      <Errors>8</Errors>
+      <Failures>2</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>One or more child tests had errors</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-12-09T18:12:39</TestDate>
+      <Status />
+      <Passed>0</Passed>
+      <Errors>8</Errors>
+      <Failures>2</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>One or more child tests had errors</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-12-09T19:50:00</TestDate>
+      <Status />
+      <Passed>0</Passed>
+      <Errors>8</Errors>
+      <Failures>2</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>One or more child tests had errors</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-12-09T19:50:40</TestDate>
+      <Status />
+      <Passed>0</Passed>
+      <Errors>8</Errors>
+      <Failures>2</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>One or more child tests had errors</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-12-09T19:57:34</TestDate>
+      <Status />
+      <Passed>0</Passed>
+      <Errors>8</Errors>
+      <Failures>2</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>One or more child tests had errors</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-12-09T20:10:24</TestDate>
+      <Status />
+      <Passed>0</Passed>
+      <Errors>8</Errors>
+      <Failures>2</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>One or more child tests had errors</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-12-09T20:17:48</TestDate>
+      <Status />
+      <Passed>1</Passed>
+      <Errors>7</Errors>
+      <Failures>2</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>One or more child tests had errors</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-12-09T20:32:35</TestDate>
+      <Status />
+      <Passed>1</Passed>
+      <Errors>7</Errors>
+      <Failures>2</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>One or more child tests had errors</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-12-09T20:41:38</TestDate>
+      <Status />
+      <Passed>2</Passed>
+      <Errors>7</Errors>
+      <Failures>1</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>One or more child tests had errors</Message>
+    </UnitTestResult>
+  </Results>
+  <Tests>
+    <TestRecord Name="DrugaDomacaZadaca_Burza">
+      <Results>
+        <UnitTestResult>
+          <TestDate>2014-12-09T18:09:53</TestDate>
+          <Status />
+          <Passed>0</Passed>
+          <Errors>8</Errors>
+          <Failures>2</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>One or more child tests had errors</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-12-09T18:12:39</TestDate>
+          <Status />
+          <Passed>0</Passed>
+          <Errors>8</Errors>
+          <Failures>2</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>One or more child tests had errors</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-12-09T19:50:00</TestDate>
+          <Status />
+          <Passed>0</Passed>
+          <Errors>8</Errors>
+          <Failures>2</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>One or more child tests had errors</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-12-09T19:50:40</TestDate>
+          <Status />
+          <Passed>0</Passed>
+          <Errors>8</Errors>
+          <Failures>2</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>One or more child tests had errors</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-12-09T19:57:34</TestDate>
+          <Status />
+          <Passed>0</Passed>
+          <Errors>8</Errors>
+          <Failures>2</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>One or more child tests had errors</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-12-09T20:10:24</TestDate>
+          <Status />
+          <Passed>0</Passed>
+          <Errors>8</Errors>
+          <Failures>2</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>One or more child tests had errors</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-12-09T20:17:48</TestDate>
+          <Status />
+          <Passed>1</Passed>
+          <Errors>7</Errors>
+          <Failures>2</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>One or more child tests had errors</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-12-09T20:32:35</TestDate>
+          <Status />
+          <Passed>1</Passed>
+          <Errors>7</Errors>
+          <Failures>2</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>One or more child tests had errors</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-12-09T20:41:38</TestDate>
+          <Status />
+          <Passed>2</Passed>
+          <Errors>7</Errors>
+          <Failures>1</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>One or more child tests had errors</Message>
+        </UnitTestResult>
+      </Results>
+      <Tests>
+        <TestRecord Name="StockExchangeTests">
+          <Results>
+            <UnitTestResult>
+              <TestDate>2014-12-09T18:09:53</TestDate>
+              <Status />
+              <Passed>0</Passed>
+              <Errors>8</Errors>
+              <Failures>2</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>One or more child tests had errors</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-12-09T18:12:39</TestDate>
+              <Status />
+              <Passed>0</Passed>
+              <Errors>8</Errors>
+              <Failures>2</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>One or more child tests had errors</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-12-09T19:50:00</TestDate>
+              <Status />
+              <Passed>0</Passed>
+              <Errors>8</Errors>
+              <Failures>2</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>One or more child tests had errors</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-12-09T19:50:40</TestDate>
+              <Status />
+              <Passed>0</Passed>
+              <Errors>8</Errors>
+              <Failures>2</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>One or more child tests had errors</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-12-09T19:57:34</TestDate>
+              <Status />
+              <Passed>0</Passed>
+              <Errors>8</Errors>
+              <Failures>2</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>One or more child tests had errors</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-12-09T20:10:24</TestDate>
+              <Status />
+              <Passed>0</Passed>
+              <Errors>8</Errors>
+              <Failures>2</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>One or more child tests had errors</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-12-09T20:17:48</TestDate>
+              <Status />
+              <Passed>1</Passed>
+              <Errors>7</Errors>
+              <Failures>2</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>One or more child tests had errors</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-12-09T20:32:35</TestDate>
+              <Status />
+              <Passed>1</Passed>
+              <Errors>7</Errors>
+              <Failures>2</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>One or more child tests had errors</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-12-09T20:41:38</TestDate>
+              <Status />
+              <Passed>2</Passed>
+              <Errors>7</Errors>
+              <Failures>1</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>One or more child tests had errors</Message>
+            </UnitTestResult>
+          </Results>
+          <Tests>
+            <TestRecord Name="Test_AddStockToIndex_Simple">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T18:09:53</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:113 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_AddStockToIndex_Simple () [0x0001c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:89 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T18:12:39</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:114 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_AddStockToIndex_Simple () [0x0001c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:89 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:50:00</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:134 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_AddStockToIndex_Simple () [0x0001c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:89 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:50:40</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:135 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_AddStockToIndex_Simple () [0x0001c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:89 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:50:47</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:135 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_AddStockToIndex_Simple () [0x0001c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:89 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:57:34</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:138 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_AddStockToIndex_Simple () [0x0001c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:89 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:10:24</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:147 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_AddStockToIndex_Simple () [0x0001c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:89 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:17:48</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:151 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_AddStockToIndex_Simple () [0x0001c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:89 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:32:35</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:151 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_AddStockToIndex_Simple () [0x0001c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:89 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:41:38</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.AddStockToIndex (System.String inIndexName, System.String inStockName) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:198 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_AddStockToIndex_Simple () [0x00082] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:98 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+              <Tests />
+            </TestRecord>
+            <TestRecord Name="Test_AddStockToPortfolio_SameStock">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T18:09:53</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:113 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_AddStockToPortfolio_SameStock () [0x0001c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:129 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T18:12:39</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:114 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_AddStockToPortfolio_SameStock () [0x0001c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:129 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:50:00</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:134 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_AddStockToPortfolio_SameStock () [0x0001c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:129 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:50:40</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:135 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_AddStockToPortfolio_SameStock () [0x0001c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:129 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:57:34</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:138 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_AddStockToPortfolio_SameStock () [0x0001c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:129 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:10:24</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:147 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_AddStockToPortfolio_SameStock () [0x0001c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:129 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:17:48</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:151 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_AddStockToPortfolio_SameStock () [0x0001c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:129 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:32:35</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:151 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_AddStockToPortfolio_SameStock () [0x0001c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:129 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:41:38</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.CreatePortfolio (System.String inPortfolioID) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:233 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_AddStockToPortfolio_SameStock () [0x0002e] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:132 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+              <Tests />
+            </TestRecord>
+            <TestRecord Name="Test_CreateIndex_Simple">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T18:09:53</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.CreateIndex (System.String inIndexName, IndexTypes inIndexType) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:153 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_CreateIndex_Simple () [0x0000f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:76 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T18:12:39</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.CreateIndex (System.String inIndexName, IndexTypes inIndexType) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:154 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_CreateIndex_Simple () [0x0000f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:76 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:50:00</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.CreateIndex (System.String inIndexName, IndexTypes inIndexType) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:174 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_CreateIndex_Simple () [0x0000f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:76 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:50:40</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.CreateIndex (System.String inIndexName, IndexTypes inIndexType) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:175 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_CreateIndex_Simple () [0x0000f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:76 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:57:34</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NullReferenceException : Object reference not set to an instance of an object</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.CreateIndex (System.String inIndexName, IndexTypes inIndexType) [0x00010] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:179 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_CreateIndex_Simple () [0x0000f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:76 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:10:24</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.IndexExists (System.String inIndexName) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:213 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_CreateIndex_Simple () [0x0003f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:80 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:17:48</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.02ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:32:35</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.01ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:41:38</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.01ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+              <Tests />
+            </TestRecord>
+            <TestRecord Name="Test_GetIndexValue_Weighted">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T18:09:53</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:113 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_GetIndexValue_Weighted () [0x0002a] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:112 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T18:12:39</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:114 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_GetIndexValue_Weighted () [0x0002a] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:112 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:50:00</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:134 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_GetIndexValue_Weighted () [0x0002a] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:112 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:50:40</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:135 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_GetIndexValue_Weighted () [0x0002a] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:112 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:57:34</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:138 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_GetIndexValue_Weighted () [0x0002a] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:112 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:10:24</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:147 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_GetIndexValue_Weighted () [0x0002a] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:112 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:17:48</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:151 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_GetIndexValue_Weighted () [0x0002a] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:112 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:32:35</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:151 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_GetIndexValue_Weighted () [0x0002a] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:112 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:41:38</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.AddStockToIndex (System.String inIndexName, System.String inStockName) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:198 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_GetIndexValue_Weighted () [0x0007b] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:119 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+              <Tests />
+            </TestRecord>
+            <TestRecord Name="Test_ListStock_IllegalPriceNegative">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T18:09:53</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>0</Errors>
+                  <Failures>1</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>An unexpected exception type was thrown
+Expected: DrugaDomacaZadaca_Burza.StockExchangeException
+ but was: System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:113 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ListStock_IllegalPriceNegative () [0x0001e] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:57 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T18:12:39</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>0</Errors>
+                  <Failures>1</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>An unexpected exception type was thrown
+Expected: DrugaDomacaZadaca_Burza.StockExchangeException
+ but was: System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:114 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ListStock_IllegalPriceNegative () [0x0001e] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:57 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:50:00</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>0</Errors>
+                  <Failures>1</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>An unexpected exception type was thrown
+Expected: DrugaDomacaZadaca_Burza.StockExchangeException
+ but was: System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:134 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ListStock_IllegalPriceNegative () [0x0001e] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:57 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:50:40</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>0</Errors>
+                  <Failures>1</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>An unexpected exception type was thrown
+Expected: DrugaDomacaZadaca_Burza.StockExchangeException
+ but was: System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:135 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ListStock_IllegalPriceNegative () [0x0001e] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:57 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:57:34</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>0</Errors>
+                  <Failures>1</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>An unexpected exception type was thrown
+Expected: DrugaDomacaZadaca_Burza.StockExchangeException
+ but was: System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:138 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ListStock_IllegalPriceNegative () [0x0001e] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:57 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:10:24</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>0</Errors>
+                  <Failures>1</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>An unexpected exception type was thrown
+Expected: DrugaDomacaZadaca_Burza.StockExchangeException
+ but was: System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:147 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ListStock_IllegalPriceNegative () [0x0001e] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:57 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:17:48</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>0</Errors>
+                  <Failures>1</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>An unexpected exception type was thrown
+Expected: DrugaDomacaZadaca_Burza.StockExchangeException
+ but was: System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:151 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ListStock_IllegalPriceNegative () [0x0001e] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:57 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:32:35</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>0</Errors>
+                  <Failures>1</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>An unexpected exception type was thrown
+Expected: DrugaDomacaZadaca_Burza.StockExchangeException
+ but was: System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:151 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ListStock_IllegalPriceNegative () [0x0001e] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:57 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:41:38</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+              <Tests />
+            </TestRecord>
+            <TestRecord Name="Test_ListStock_SameNameAlreadyExists">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T18:09:53</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>0</Errors>
+                  <Failures>1</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>An unexpected exception type was thrown
+Expected: DrugaDomacaZadaca_Burza.StockExchangeException
+ but was: System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:113 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ListStock_SameNameAlreadyExists () [0x0001e] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:49 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T18:12:39</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>0</Errors>
+                  <Failures>1</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>An unexpected exception type was thrown
+Expected: DrugaDomacaZadaca_Burza.StockExchangeException
+ but was: System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:114 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ListStock_SameNameAlreadyExists () [0x0001e] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:49 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:50:00</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>0</Errors>
+                  <Failures>1</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>An unexpected exception type was thrown
+Expected: DrugaDomacaZadaca_Burza.StockExchangeException
+ but was: System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:134 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ListStock_SameNameAlreadyExists () [0x0001e] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:49 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:50:40</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>0</Errors>
+                  <Failures>1</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>An unexpected exception type was thrown
+Expected: DrugaDomacaZadaca_Burza.StockExchangeException
+ but was: System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:135 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ListStock_SameNameAlreadyExists () [0x0001e] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:49 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:57:34</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>0</Errors>
+                  <Failures>1</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>An unexpected exception type was thrown
+Expected: DrugaDomacaZadaca_Burza.StockExchangeException
+ but was: System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:138 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ListStock_SameNameAlreadyExists () [0x0001e] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:49 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:10:24</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>0</Errors>
+                  <Failures>1</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>An unexpected exception type was thrown
+Expected: DrugaDomacaZadaca_Burza.StockExchangeException
+ but was: System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:147 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ListStock_SameNameAlreadyExists () [0x0001e] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:49 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:17:48</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>0</Errors>
+                  <Failures>1</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>An unexpected exception type was thrown
+Expected: DrugaDomacaZadaca_Burza.StockExchangeException
+ but was: System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:151 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ListStock_SameNameAlreadyExists () [0x0001e] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:49 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:32:35</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>0</Errors>
+                  <Failures>1</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>An unexpected exception type was thrown
+Expected: DrugaDomacaZadaca_Burza.StockExchangeException
+ but was: System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:151 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ListStock_SameNameAlreadyExists () [0x0001e] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:49 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:41:38</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>0</Errors>
+                  <Failures>1</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>DrugaDomacaZadaca_Burza.StockExchangeException was expected</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+              <Tests />
+            </TestRecord>
+            <TestRecord Name="Test_ListStock_Simple">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T18:09:53</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.NumberOfStocks () [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:128 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ListStock_Simple () [0x00008] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:31 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T18:12:39</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.NumberOfStocks () [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:129 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ListStock_Simple () [0x00008] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:31 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:50:00</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.NumberOfStocks () [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:149 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ListStock_Simple () [0x00008] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:31 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:50:40</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.NumberOfStocks () [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:150 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ListStock_Simple () [0x00008] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:31 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:57:34</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.NumberOfStocks () [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:153 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ListStock_Simple () [0x00008] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:31 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:10:24</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.NumberOfStocks () [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:162 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ListStock_Simple () [0x00008] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:31 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:17:48</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.NumberOfStocks () [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:166 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ListStock_Simple () [0x00008] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:31 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:32:35</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.NumberOfStocks () [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:166 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ListStock_Simple () [0x00008] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:31 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:41:38</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.NumberOfStocks () [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:167 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_ListStock_Simple () [0x00008] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:31 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+              <Tests />
+            </TestRecord>
+            <TestRecord Name="Test_RemoveStockFromPortfolio_NumOfShares">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T18:09:53</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:113 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_RemoveStockFromPortfolio_NumOfShares () [0x0001c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:146 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T18:12:39</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:114 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_RemoveStockFromPortfolio_NumOfShares () [0x0001c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:146 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:50:00</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:134 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_RemoveStockFromPortfolio_NumOfShares () [0x0001c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:146 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:50:40</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:135 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_RemoveStockFromPortfolio_NumOfShares () [0x0001c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:146 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:57:34</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:138 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_RemoveStockFromPortfolio_NumOfShares () [0x0001c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:146 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:10:24</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:147 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_RemoveStockFromPortfolio_NumOfShares () [0x0001c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:146 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:17:48</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:151 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_RemoveStockFromPortfolio_NumOfShares () [0x0001c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:146 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:32:35</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:151 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_RemoveStockFromPortfolio_NumOfShares () [0x0001c] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:146 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:41:38</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.CreatePortfolio (System.String inPortfolioID) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:233 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_RemoveStockFromPortfolio_NumOfShares () [0x00051] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:151 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+              <Tests />
+            </TestRecord>
+            <TestRecord Name="Test_SetStockPrice_NewPrice">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T18:09:53</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:113 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_SetStockPrice_NewPrice () [0x0002f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:65 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T18:12:39</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:114 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_SetStockPrice_NewPrice () [0x0002f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:65 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:50:00</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:134 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_SetStockPrice_NewPrice () [0x0002f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:65 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:50:40</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:135 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_SetStockPrice_NewPrice () [0x0002f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:65 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:57:34</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:138 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_SetStockPrice_NewPrice () [0x0002f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:65 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:10:24</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:147 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_SetStockPrice_NewPrice () [0x0002f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:65 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:17:48</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:151 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_SetStockPrice_NewPrice () [0x0002f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:65 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:32:35</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.ListStock (System.String inStockName, Int64 inNumberOfShares, Decimal inInitialPrice, DateTime inTimeStamp) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:151 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_SetStockPrice_NewPrice () [0x0002f] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:65 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:41:38</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.SetStockPrice (System.String inStockName, DateTime inIimeStamp, Decimal inStockValue) [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:172 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_SetStockPrice_NewPrice () [0x00056] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:67 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+              <Tests />
+            </TestRecord>
+            <TestRecord Name="Test_StockExchangeAtTheBeginig">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T18:09:53</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.NumberOfStocks () [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:128 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_StockExchangeAtTheBeginig () [0x00008] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:23 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T18:12:39</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.NumberOfStocks () [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:129 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_StockExchangeAtTheBeginig () [0x00008] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:23 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:50:00</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.NumberOfStocks () [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:149 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_StockExchangeAtTheBeginig () [0x00008] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:23 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:50:40</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.NumberOfStocks () [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:150 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_StockExchangeAtTheBeginig () [0x00008] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:23 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T19:57:34</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.NumberOfStocks () [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:153 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_StockExchangeAtTheBeginig () [0x00008] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:23 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:10:24</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.NumberOfStocks () [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:162 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_StockExchangeAtTheBeginig () [0x00008] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:23 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:17:48</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.NumberOfStocks () [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:166 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_StockExchangeAtTheBeginig () [0x00008] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:23 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:32:35</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.NumberOfStocks () [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:166 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_StockExchangeAtTheBeginig () [0x00008] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:23 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-12-09T20:41:38</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at DrugaDomacaZadaca_Burza.StockExchange.NumberOfStocks () [0x00001] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchange.cs:167 
+  at DrugaDomacaZadaca_Burza.StockExchangeTests.Test_StockExchangeAtTheBeginig () [0x00008] in /home/jdomsic/Documents/OO/Burza/Burza/StockExchangeTests.cs:23 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+              <Tests />
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+      </Tests>
+    </TestRecord>
+  </Tests>
+</TestRecord>
