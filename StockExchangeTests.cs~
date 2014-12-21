@@ -44,6 +44,16 @@ namespace DrugaDomacaZadaca_Burza
 
 		[Test()]
 		[ExpectedException(typeof(StockExchangeException))]
+		public void Test_ListStock_SimpleNoStockName()
+		{
+			Assert.AreEqual(0, _stockExchange.NumberOfStocks());
+			string firstStockName = "";
+			_stockExchange.ListStock(firstStockName, 1000000, 10m, DateTime.Now);
+
+		}
+
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
 		public void Test_ListStock_SameNameAlreadyExists()
 		{
 			_stockExchange.ListStock("IBM", 1000000, 10m, DateTime.Now);
@@ -1519,6 +1529,1281 @@ namespace DrugaDomacaZadaca_Burza
 			Assert.AreEqual(0, _stockExchange.NumberOfIndices());
 			Assert.AreEqual(0, _stockExchange.NumberOfPortfolios());
 		}
+
+		
+		[Test()]
+		public void Ankica_TestStockExchangeAtTheBeginig()
+		{
+			_stockExchange = Factory.CreateStockExchange();
+			Assert.AreEqual(0, _stockExchange.NumberOfStocks());
+			Assert.AreEqual(0, _stockExchange.NumberOfIndices());
+			Assert.AreEqual(0, _stockExchange.NumberOfPortfolios());
+		}
+
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestListStock_SameNameAlreadyExists()
+		{
+			_stockExchange = Factory.CreateStockExchange();
+			_stockExchange.ListStock("IBM", 1000000, 10m, DateTime.Now);
+			_stockExchange.ListStock("IBM", 1000000, 10m, DateTime.Now);
+		}
+
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestListStock_IllegalPriceNegative()
+		{
+			_stockExchange = Factory.CreateStockExchange();
+			_stockExchange.ListStock("IBM", 1000000, -10m, DateTime.Now);
+		}
+
+		[Test()]
+		public void Ankica_TestSetStockPrice_NewPrice()
+		{
+			_stockExchange = Factory.CreateStockExchange();
+			string stockName = "IBM";
+			decimal oldPrice = 10m;
+			_stockExchange.ListStock(stockName, 1000000, oldPrice, new DateTime(2012, 1, 10, 15, 22, 00));
+			decimal newPrice = 20m;
+			_stockExchange.SetStockPrice(stockName, new DateTime(2012, 1, 10, 15, 40, 00), newPrice);
+
+			Assert.AreEqual(newPrice, _stockExchange.GetStockPrice(stockName, new DateTime(2012, 1, 10, 15, 50, 0, 0)));
+		}
+
+		[Test()]
+		public void Ankica_TestCreateIndex_Simple()
+		{
+			_stockExchange = Factory.CreateStockExchange();
+			string firstIndexName = "DOW JONES";
+			_stockExchange.CreateIndex(firstIndexName, IndexTypes.AVERAGE);
+			string secondIndexName = "S&P";
+			_stockExchange.CreateIndex(secondIndexName, IndexTypes.WEIGHTED);
+			Assert.AreEqual(2, _stockExchange.NumberOfIndices());
+			Assert.IsTrue(_stockExchange.IndexExists(firstIndexName));
+			Assert.IsTrue(_stockExchange.IndexExists(secondIndexName));
+			Assert.IsFalse(_stockExchange.IndexExists("AB"));
+		}
+
+		[Test()]
+		public void Ankica_TestGetIndexValue_Weighted()
+		{
+			_stockExchange = Factory.CreateStockExchange();
+			string firstStockName = "IBM";
+			_stockExchange.ListStock(firstStockName, 1, 100m, new DateTime(2012, 1, 11, 14, 10, 00, 00));
+			string secondStockName = "MSFT";
+			_stockExchange.ListStock(secondStockName, 2, 200m, new DateTime(2012, 1, 11, 14, 10, 00, 00));
+
+			string indexName = "DOW JONES";
+			_stockExchange.CreateIndex(indexName, IndexTypes.WEIGHTED);
+
+			_stockExchange.AddStockToIndex(indexName, firstStockName);
+			Assert.AreEqual(100m, _stockExchange.GetIndexValue(indexName, new DateTime(2012, 1, 11, 14, 11, 00, 00)));
+			_stockExchange.AddStockToIndex(indexName, secondStockName);
+			Assert.AreEqual(180m, _stockExchange.GetIndexValue(indexName, new DateTime(2012, 1, 11, 14, 11, 00, 00)));
+
+			Assert.AreEqual(180m, _stockExchange.GetIndexValue(indexName, new DateTime(2012, 1, 11, 14, 11, 00, 00)));
+		}
+
+		[Test()]
+		public void Ankica_TestAddStockToPortfolio_SameStock()
+		{
+			_stockExchange = Factory.CreateStockExchange();
+			string stockName = "IBM";
+			_stockExchange.ListStock(stockName, 5, 100m, DateTime.Now);
+
+			string portfolioID = "P1";
+			_stockExchange.CreatePortfolio(portfolioID);
+
+			_stockExchange.AddStockToPortfolio(portfolioID, stockName, 1);
+			_stockExchange.AddStockToPortfolio(portfolioID, stockName, 2);
+
+			Assert.IsTrue(_stockExchange.IsStockPartOfPortfolio(portfolioID, stockName));
+			Assert.AreEqual(1, _stockExchange.NumberOfStocksInPortfolio(portfolioID));
+			Assert.AreEqual(3, _stockExchange.NumberOfSharesOfStockInPortfolio(portfolioID, stockName));
+		}
+
+		[Test()]
+		public void Ankica_TestRemoveStockFromPortfolio_NumOfShares()
+		{
+			_stockExchange = Factory.CreateStockExchange();
+			string firstStockName = "IBM";
+			_stockExchange.ListStock(firstStockName, 5, 100m, DateTime.Now);
+			string secondStockName = "MSFT";
+			_stockExchange.ListStock(secondStockName, 5, 200m, DateTime.Now);
+
+			string portfolioID = "P1";
+			_stockExchange.CreatePortfolio(portfolioID);
+			_stockExchange.AddStockToPortfolio(portfolioID, firstStockName, 4);
+			_stockExchange.AddStockToPortfolio(portfolioID, secondStockName, 1);
+
+			_stockExchange.RemoveStockFromPortfolio(portfolioID, firstStockName, 2);
+
+			Assert.IsTrue(_stockExchange.IsStockPartOfPortfolio(portfolioID, firstStockName));
+			Assert.IsTrue(_stockExchange.IsStockPartOfPortfolio(portfolioID, secondStockName));
+			Assert.AreEqual(2, _stockExchange.NumberOfStocksInPortfolio(portfolioID));
+			Assert.AreEqual(2, _stockExchange.NumberOfSharesOfStockInPortfolio(portfolioID, firstStockName));
+			Assert.AreEqual(1, _stockExchange.NumberOfSharesOfStockInPortfolio(portfolioID, secondStockName));
+		}
+
+		[Test()]
+		public void GIGATEST()
+		{
+			_stockExchange = Factory.CreateStockExchange();
+			Assert.AreEqual(0, _stockExchange.NumberOfStocks());
+			Assert.AreEqual(0, _stockExchange.NumberOfIndices());
+			Assert.AreEqual(0, _stockExchange.NumberOfPortfolios());
+
+			string stock1 = "Dionica1";
+			string stock2 = "Dionica2";
+			string stock3 = "Dionica3";
+			string indeks1 = "Indeks1";
+			string indeks2 = "Indeks2";
+
+			_stockExchange.ListStock(stock1, 10, 100m, new DateTime(2013, 1, 1, 10, 00, 00));
+			_stockExchange.ListStock(stock2, 20, 200m, new DateTime(2013, 1, 1, 10, 00, 00));
+			//_stockExchange.ListStock("DionICa2", 30, 1m, new DateTime(2013, 1, 1, 10, 00, 00));
+			//_stockExchange.ListStock(stock3, 30, 0m, new DateTime(2013, 1, 1, 10, 00, 00));
+			//_stockExchange.ListStock(stock3, 30, -50m, new DateTime(2013, 1, 1, 10, 00, 00));
+			//_stockExchange.ListStock(stock3, 0, 300m, new DateTime(2013, 1, 1, 10, 00, 00)); 
+			//_stockExchange.ListStock(stock3, -30, 300m, new DateTime(2013, 1, 1, 10, 00, 00)); 
+			//_stockExchange.ListStock(stock1, 10, 200m, new DateTime(2013, 1, 1, 10, 00, 00)); //ova dionica vec postoji
+			_stockExchange.ListStock(stock3, 30, 300m, new DateTime(2013, 1, 1, 10, 00, 00));
+			Assert.IsTrue(_stockExchange.StockExists("dioniCA1"));
+			_stockExchange.SetStockPrice(stock1, new DateTime(2015, 1, 22, 10, 0, 0), 500m);
+			//_stockExchange.SetStockPrice("DionicaNePostoji", new DateTime(2013, 1, 22, 10, 0, 0), 500m);
+			//_stockExchange.SetStockPrice(stock1, new DateTime(2013, 1, 22, 10, 0, 0), 0m);
+			Assert.AreEqual(100m, _stockExchange.GetStockPrice(stock1, DateTime.Now));
+			Assert.AreEqual(100m, _stockExchange.GetInitialStockPrice(stock1));
+			Assert.AreEqual(500m, _stockExchange.GetLastStockPrice(stock1));
+			Assert.AreEqual(_stockExchange.NumberOfStocks(), 3);
+			_stockExchange.DelistStock(stock1);
+			Assert.AreEqual(_stockExchange.NumberOfStocks(), 2);
+			Assert.IsFalse(_stockExchange.StockExists(stock1));
+			//_stockExchange.SetStockPrice(stock1, new DateTime(2013, 1, 22, 10, 0, 0), 500m);
+			_stockExchange.ListStock(stock1, 10, 100m, new DateTime(2013, 1, 1, 10, 00, 00));
+			Assert.AreEqual(_stockExchange.NumberOfStocks(), 3);
+
+			_stockExchange.CreateIndex(indeks1, IndexTypes.AVERAGE);
+			_stockExchange.CreateIndex(indeks2, IndexTypes.WEIGHTED);
+			//_stockExchange.CreateIndex("INDEKS1", IndexTypes.AVERAGE); //ovaj postoji vec
+			Assert.AreEqual(_stockExchange.NumberOfIndices(), 2);
+			Assert.AreEqual(0, _stockExchange.GetIndexValue(indeks1, DateTime.Now));
+			Assert.IsTrue(_stockExchange.IndexExists(indeks2));
+			Assert.IsTrue(_stockExchange.IndexExists("indeKS2"));
+			_stockExchange.AddStockToIndex(indeks1, stock1);
+			_stockExchange.AddStockToIndex(indeks2, stock2);
+			_stockExchange.AddStockToIndex(indeks2, stock3);
+			_stockExchange.AddStockToIndex(indeks2, stock1); // stock1 je u indeksu1
+
+			Assert.IsTrue(_stockExchange.IsStockPartOfIndex(indeks1, stock1));
+			Assert.IsTrue(_stockExchange.IsStockPartOfIndex(indeks2, stock2));
+			Assert.IsTrue(_stockExchange.IsStockPartOfIndex(indeks2, stock3));
+			Assert.IsTrue(_stockExchange.IsStockPartOfIndex(indeks2, stock1));
+			Assert.IsFalse(_stockExchange.IsStockPartOfIndex(indeks1, stock3));
+
+			_stockExchange.RemoveStockFromIndex(indeks2, stock2);
+			_stockExchange.RemoveStockFromIndex(indeks2, stock1);
+			//_stockExchange.RemoveStockFromIndex(indeks2, "bla");
+			Assert.IsFalse(_stockExchange.IsStockPartOfIndex(indeks2, stock2));
+			_stockExchange.AddStockToIndex(indeks1, stock2);
+			Assert.IsTrue(_stockExchange.IsStockPartOfIndex(indeks1, stock2));
+
+
+			Assert.IsTrue(_stockExchange.IsStockPartOfIndex(indeks1, stock1));
+			Assert.IsTrue(_stockExchange.IsStockPartOfIndex(indeks1, stock2));
+			Assert.IsFalse(_stockExchange.IsStockPartOfIndex(indeks1, stock3));
+
+			Assert.IsFalse(_stockExchange.IsStockPartOfIndex(indeks2, stock1));
+			Assert.IsFalse(_stockExchange.IsStockPartOfIndex(indeks2, stock2));
+			Assert.IsTrue(_stockExchange.IsStockPartOfIndex(indeks2, stock3));
+
+			Assert.AreEqual(_stockExchange.GetIndexValue(indeks1, DateTime.Now), 150m);
+			Assert.AreEqual(_stockExchange.GetIndexValue(indeks2, DateTime.Now), 300m); // tu pada
+			_stockExchange.SetStockPrice(stock1, DateTime.Now, 1000m);
+			Assert.AreEqual(_stockExchange.GetIndexValue(indeks1, DateTime.Now), 600m);
+			_stockExchange.RemoveStockFromIndex(indeks1, stock2);
+			Assert.AreEqual(_stockExchange.GetIndexValue(indeks1, DateTime.Now), 1000m);
+
+			Assert.IsTrue(_stockExchange.IsStockPartOfIndex(indeks1, stock1));
+			_stockExchange.RemoveStockFromIndex(indeks1, stock1);
+
+			_stockExchange.DelistStock(stock1);
+			//_stockExchange.DelistStock("nekatamo");
+			Assert.IsFalse(_stockExchange.IsStockPartOfIndex(indeks1, stock2));
+			//Assert.IsFalse(_stockExchange.IsStockPartOfIndex(indeks1, stock1));
+			Assert.IsFalse(_stockExchange.IsStockPartOfIndex(indeks1, stock3));
+			Assert.AreEqual(0, _stockExchange.NumberOfStocksInIndex(indeks1));
+
+			Assert.AreEqual(_stockExchange.GetIndexValue(indeks1, DateTime.Now), 0m);
+
+			Assert.AreEqual(_stockExchange.NumberOfStocksInIndex(indeks1), 0);
+			Assert.AreEqual(_stockExchange.NumberOfStocksInIndex(indeks2), 1);
+			//Assert.AreEqual(_stockExchange.NumberOfStocksInIndex("ASDAD"), 0);
+
+			_stockExchange.DelistStock(stock2);
+			_stockExchange.DelistStock(stock3);
+			_stockExchange.ListStock(stock1, 10, 100m, new DateTime(2013, 1, 1, 20, 00, 00));
+			_stockExchange.ListStock(stock2, 20, 200m, new DateTime(2013, 1, 1, 20, 00, 00));
+			_stockExchange.ListStock(stock3, 30, 300m, new DateTime(2013, 1, 1, 20, 00, 00));
+
+			string portfelj1 = "Portfelj1";
+			string portfelj2 = "Portfelj2";
+
+			_stockExchange.CreatePortfolio(portfelj1);
+			_stockExchange.CreatePortfolio(portfelj2);
+			//_stockExchange.CreatePortfolio("Portfelj2");
+			Assert.AreEqual(_stockExchange.NumberOfPortfolios(), 2);
+			Assert.IsTrue(_stockExchange.PortfolioExists(portfelj2));
+			Assert.IsTrue(_stockExchange.PortfolioExists("Portfelj1"));
+			Assert.IsFalse(_stockExchange.PortfolioExists("portfelj1"));
+			Assert.IsFalse(_stockExchange.PortfolioExists("NekiTamo"));
+			_stockExchange.AddStockToPortfolio(portfelj1, stock1, 5);
+			//_stockExchange.AddStockToPortfolio("Nema", stock1, 4);
+			//_stockExchange.AddStockToPortfolio(portfelj1, "Nema", 4);
+			//_stockExchange.AddStockToPortfolio(portfelj1, stock1, 0);
+			//_stockExchange.AddStockToPortfolio(portfelj1, stock1, -4);
+			_stockExchange.AddStockToPortfolio(portfelj1, stock1, 4);
+			//_stockExchange.AddStockToPortfolio(portfelj1, stock1, 3);//nema vise slobodnih dionica
+			_stockExchange.AddStockToPortfolio(portfelj2, stock1, 1);
+			_stockExchange.AddStockToPortfolio(portfelj2, stock2, 10);
+			_stockExchange.AddStockToPortfolio(portfelj2, stock3, 20);
+			Assert.AreEqual(_stockExchange.NumberOfStocksInPortfolio(portfelj1), 1);
+			//Assert.AreEqual(_stockExchange.NumberOfStocksInPortfolio("portfelj1"), 0);//"portfelj1" ne postoji
+			Assert.AreEqual(_stockExchange.NumberOfStocksInPortfolio(portfelj2), 3);
+			Assert.AreEqual(_stockExchange.NumberOfSharesOfStockInPortfolio(portfelj1, stock1), 9);
+			//Assert.AreEqual(_stockExchange.NumberOfSharesOfStockInPortfolio(portfelj1, stock2), 0);
+			Assert.AreEqual(_stockExchange.NumberOfSharesOfStockInPortfolio(portfelj2, stock1), 1);
+			Assert.AreEqual(_stockExchange.NumberOfSharesOfStockInPortfolio(portfelj2, stock3), 20);
+			//Assert.AreEqual(_stockExchange.NumberOfSharesOfStockInPortfolio(portfelj2, "nope"), 0);
+			//Assert.AreEqual(_stockExchange.NumberOfSharesOfStockInPortfolio("aaa", stock3), 0);
+
+			Assert.AreEqual(_stockExchange.GetPortfolioValue(portfelj2, DateTime.Now), 8100);
+			_stockExchange.SetStockPrice(stock1, DateTime.Now, 101m);
+			Assert.AreEqual(_stockExchange.GetPortfolioValue(portfelj2, DateTime.Now), 8101);
+			_stockExchange.RemoveStockFromPortfolio(portfelj2, stock1, 1);
+			//_stockExchange.RemoveStockFromPortfolio("poRTfelj2", stock1, 1);
+			//_stockExchange.RemoveStockFromPortfolio(portfelj2, "nedamiseovoraditaaaaaaa", 1);
+			Assert.AreEqual(_stockExchange.NumberOfStocksInPortfolio(portfelj2), 2);
+			Assert.IsFalse(_stockExchange.IsStockPartOfPortfolio(portfelj2, stock1));
+			//Assert.IsFalse(_stockExchange.IsStockPartOfPortfolio(portfelj2, "nepostoji"));
+			//Assert.IsFalse(_stockExchange.IsStockPartOfPortfolio("nema_me", stock1));
+			Assert.AreEqual(_stockExchange.GetPortfolioValue(portfelj2, DateTime.Now), 8000);
+
+			_stockExchange.RemoveStockFromPortfolio(portfelj2, stock3, 10);
+			Assert.AreEqual(_stockExchange.NumberOfStocksInPortfolio(portfelj2), 2);
+			Assert.IsTrue(_stockExchange.IsStockPartOfPortfolio(portfelj2, stock3));
+			Assert.AreEqual(_stockExchange.GetPortfolioValue(portfelj2, DateTime.Now), 5000);
+
+			_stockExchange.RemoveStockFromPortfolio(portfelj2, stock3);
+			Assert.AreEqual(_stockExchange.NumberOfStocksInPortfolio(portfelj2), 1);
+			Assert.IsFalse(_stockExchange.IsStockPartOfPortfolio(portfelj2, stock3));
+			Assert.AreEqual(_stockExchange.GetPortfolioValue(portfelj2, DateTime.Now), 2000);
+
+			_stockExchange.DelistStock(stock2);
+			Assert.AreEqual(_stockExchange.NumberOfStocksInPortfolio(portfelj2), 0);
+			//Assert.IsFalse(_stockExchange.IsStockPartOfPortfolio(portfelj2, stock2)); //dionica ne postoji
+			Assert.AreEqual(_stockExchange.GetPortfolioValue(portfelj2, DateTime.Now), 0);
+
+
+			_stockExchange.DelistStock(stock1);
+			_stockExchange.DelistStock(stock3);
+			_stockExchange.ListStock(stock1, 10, 100m, new DateTime(2013, 1, 1, 20, 00, 00));
+			_stockExchange.ListStock(stock2, 20, 200m, new DateTime(2013, 1, 1, 20, 00, 00));
+			_stockExchange.ListStock(stock3, 30, 300m, new DateTime(2013, 1, 1, 20, 00, 00));
+			_stockExchange.AddStockToPortfolio(portfelj1, stock1, 10);
+			_stockExchange.AddStockToPortfolio(portfelj1, stock2, 10);
+			_stockExchange.AddStockToPortfolio(portfelj1, stock3, 10);
+			Assert.AreEqual(_stockExchange.GetPortfolioPercentChangeInValueForMonth(portfelj2, 2013, 3), 0);
+
+			_stockExchange.SetStockPrice(stock1, new DateTime(2013, 4, 30, 23, 59, 59, 999), 150m);
+			_stockExchange.SetStockPrice(stock2, new DateTime(2013, 4, 30, 23, 59, 59, 999), 300m);
+			_stockExchange.SetStockPrice(stock3, new DateTime(2013, 4, 30, 23, 59, 59, 999), 450m);
+
+			Assert.AreEqual(50m, _stockExchange.GetPortfolioPercentChangeInValueForMonth(portfelj1, 2013, 4));
+			Assert.AreEqual(0m, _stockExchange.GetPortfolioPercentChangeInValueForMonth(portfelj1, 2013, 5));
+
+		}
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestAddStockToIndex_Complicated()
+		{
+			// Dodaju se dionice u index, onda se jedna obriše s burze i pokuša se dohvatiti u indeksu 
+			_stockExchange = Factory.CreateStockExchange();
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 1000000, 10m, DateTime.Now);
+			string dionica2 = "Dionica2";
+			_stockExchange.ListStock(dionica2, 1000000, 10m, DateTime.Now);
+
+			string indeks1 = "indeks1";
+			_stockExchange.CreateIndex(indeks1, IndexTypes.WEIGHTED);
+
+			_stockExchange.AddStockToIndex(indeks1, dionica1);
+			_stockExchange.AddStockToIndex(indeks1, dionica2);
+
+			Assert.IsTrue(_stockExchange.IsStockPartOfIndex(indeks1, dionica1));
+			Assert.IsTrue(_stockExchange.IsStockPartOfIndex(indeks1, dionica2));
+			Assert.AreEqual(2, _stockExchange.NumberOfStocksInIndex(indeks1));
+
+			_stockExchange.DelistStock(dionica1);
+
+			_stockExchange.RemoveStockFromIndex(indeks1, dionica1);             // treba baciti exception
+		}
+
+
+		[Test()]
+		public void Ankica_TestAddStockToIndex_MoreIndices()
+		{
+			// Dodaje se ista dionica u različite indexe 
+			_stockExchange = Factory.CreateStockExchange();
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 1000000, 10m, DateTime.Now);
+
+			string indeks1 = "indeks1";
+			_stockExchange.CreateIndex(indeks1, IndexTypes.WEIGHTED);
+			string indeks2 = "indeks2";
+			_stockExchange.CreateIndex(indeks2, IndexTypes.AVERAGE);
+
+			_stockExchange.AddStockToIndex(indeks1, dionica1);
+			_stockExchange.AddStockToIndex(indeks2, dionica1);
+
+			Assert.IsTrue(_stockExchange.IsStockPartOfIndex(indeks1, dionica1));
+			Assert.IsTrue(_stockExchange.IsStockPartOfIndex(indeks2, dionica1));
+			Assert.AreEqual(1, _stockExchange.NumberOfStocksInIndex(indeks1));
+			Assert.AreEqual(1, _stockExchange.NumberOfStocksInIndex(indeks2));
+		}
+
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestAddStockToIndex_NoIndex()
+		{
+			// Dodaju se dionice u index koji ne postoji na burzi
+			_stockExchange = Factory.CreateStockExchange();
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 1000000, 10m, DateTime.Now);
+			string dionica2 = "Dionica2";
+			_stockExchange.ListStock(dionica2, 1000000, 10m, DateTime.Now);
+
+			string indeks1 = "IndeksKojiNePostoji";
+
+			_stockExchange.AddStockToIndex("IndeksKojiNePostoji", dionica1);
+		}
+
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestAddStockToIndex_NoStock()
+		{
+			// Dodaju se dionice koje ne postoje na burzi u index koji postoji
+			_stockExchange = Factory.CreateStockExchange();
+			string indeks1 = "indeks1";
+			_stockExchange.CreateIndex(indeks1, IndexTypes.WEIGHTED);
+
+			_stockExchange.AddStockToIndex(indeks1, "dionicaKojaNePostoji");
+
+		}
+
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestAddStockToIndex_SameStock()
+		{
+			// Dodaje se ista dionica više puta u index
+			_stockExchange = Factory.CreateStockExchange();
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 1000000, 10m, DateTime.Now);
+
+			string indeks1 = "indeks1";
+			_stockExchange.CreateIndex(indeks1, IndexTypes.WEIGHTED);
+
+			_stockExchange.AddStockToIndex(indeks1, dionica1);
+			_stockExchange.AddStockToIndex(indeks1, dionica1);
+		}
+
+
+
+		[Test()]
+		public void Ankica_TestAddStockToPortfolio_Complicated()
+		{
+			// Dodaju se dionice u portfelj, onda se jedna obriše s burze i pokuša se dohvatiti u portfelju
+			_stockExchange = Factory.CreateStockExchange();
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 1000000, 10m, DateTime.Now);
+			string dionica2 = "Dionica2";
+			_stockExchange.ListStock(dionica2, 1000000, 10m, DateTime.Now);
+
+			string portfelj1 = "portfelj1";
+			_stockExchange.CreatePortfolio(portfelj1);
+			_stockExchange.AddStockToPortfolio(portfelj1, dionica1, 1);
+			_stockExchange.AddStockToPortfolio(portfelj1, dionica2, 1);
+
+			Assert.IsTrue(_stockExchange.IsStockPartOfPortfolio(portfelj1, dionica1));
+			Assert.IsTrue(_stockExchange.IsStockPartOfPortfolio(portfelj1, dionica2));
+			Assert.AreEqual(2, _stockExchange.NumberOfStocksInPortfolio(portfelj1));
+
+			_stockExchange.DelistStock(dionica1);
+
+			Assert.IsFalse(_stockExchange.IsStockPartOfPortfolio(portfelj1, dionica1));
+			Assert.IsTrue(_stockExchange.IsStockPartOfPortfolio(portfelj1, dionica2));
+
+			_stockExchange.DelistStock(dionica2);                       // dodano u test, provjera obriše li se portfelj
+			Assert.IsTrue(_stockExchange.PortfolioExists(portfelj1));    //nakon što se izbrišu sve dionice iz njega (ili s burze)
+		}
+
+		[Test()]
+		public void Ankica_TestAddStockToPortfolio_GreaterThenNumOfShares()
+		{
+			// Dodaje se ista dionica više puta u portfelj - ukupno više od postojećeg broja 
+			_stockExchange = Factory.CreateStockExchange();
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 100, 10m, DateTime.Now);
+
+			string portfelj1 = "portfelj1";
+			_stockExchange.CreatePortfolio(portfelj1);
+
+			_stockExchange.AddStockToPortfolio(portfelj1, dionica1, 50);
+			//_stockExchange.AddStockToPortfolio(portfelj1, dionica1, 150);   // previše ih dodamo, treba ih dodati još 50 (ukupno ih mora biti 100)
+
+			Assert.IsTrue(_stockExchange.IsStockPartOfPortfolio(portfelj1, dionica1));
+			Assert.AreEqual(50, _stockExchange.NumberOfSharesOfStockInPortfolio(portfelj1, dionica1));
+		}
+
+		[Test()]
+		public void Ankica_TestAddStockToPortfolio_MorePortfolios()
+		{
+			// Dodaje se ista dionica u različiti portfelj
+			_stockExchange = Factory.CreateStockExchange();
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 100, 10m, DateTime.Now);
+
+			string portfelj1 = "portfelj1";
+			_stockExchange.CreatePortfolio(portfelj1);
+			string portfelj2 = "portfelj2";
+			_stockExchange.CreatePortfolio(portfelj2);
+
+			_stockExchange.AddStockToPortfolio(portfelj1, dionica1, 50);
+			_stockExchange.AddStockToPortfolio(portfelj2, dionica1, 30);
+
+			Assert.IsTrue(_stockExchange.IsStockPartOfPortfolio(portfelj1, dionica1));
+			Assert.IsTrue(_stockExchange.IsStockPartOfPortfolio(portfelj2, dionica1));
+
+			Assert.AreEqual(50, _stockExchange.NumberOfSharesOfStockInPortfolio(portfelj1, dionica1));
+			Assert.AreEqual(30, _stockExchange.NumberOfSharesOfStockInPortfolio(portfelj2, dionica1));
+		}
+
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestAddStockToPortfolio_NegativeNumberOfShares()
+		{
+			// dodaje se neispravan broj dionica u portfelj
+			_stockExchange = Factory.CreateStockExchange();
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 100, 10m, DateTime.Now);
+
+			string portfelj1 = "portfelj1";
+			_stockExchange.CreatePortfolio(portfelj1);
+
+			_stockExchange.AddStockToPortfolio(portfelj1, dionica1, -100);
+		}
+
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestAddStockToPortfolio_NoPortfolio()
+		{
+			// Dodaju se dionice u portfelj koji ne postoji na burzi
+			_stockExchange = Factory.CreateStockExchange();
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 100, 10m, DateTime.Now);
+
+			_stockExchange.AddStockToPortfolio("PortfeljKojiNePostoji", dionica1, 100);
+		}
+
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestAddStockToPortfolio_NoStock()
+		{
+			// Dodaju se dionice koje ne postoje na burzi u portfelj koji postoji
+			_stockExchange = Factory.CreateStockExchange();
+			string portfelj1 = "portfelj1";
+			_stockExchange.CreatePortfolio(portfelj1);
+
+			_stockExchange.AddStockToPortfolio(portfelj1, "NepostojeceDionice", 100);
+		}
+
+		[Test()]
+		public void Ankica_TestAddStockToPortfolio_Simple()
+		{
+			// Dodaju se dionice u portfelj
+			_stockExchange = Factory.CreateStockExchange();
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 100, 10m, DateTime.Now);
+			string dionica2 = "Dionica2";
+			_stockExchange.ListStock(dionica2, 100, 10m, DateTime.Now);
+
+			string portfelj1 = "portfelj1";
+			_stockExchange.CreatePortfolio(portfelj1);
+
+			_stockExchange.AddStockToPortfolio(portfelj1, dionica1, 50);
+			_stockExchange.AddStockToPortfolio(portfelj1, dionica2, 50);
+
+			Assert.IsTrue(_stockExchange.IsStockPartOfPortfolio(portfelj1, dionica1));
+			Assert.IsTrue(_stockExchange.IsStockPartOfPortfolio(portfelj1, dionica2));
+
+			Assert.AreEqual(2, _stockExchange.NumberOfStocksInPortfolio(portfelj1));
+			Assert.AreEqual(50, _stockExchange.NumberOfSharesOfStockInPortfolio(portfelj1, dionica1));
+			Assert.AreEqual(50, _stockExchange.NumberOfSharesOfStockInPortfolio(portfelj1, dionica2));
+		}
+
+		[Test()]
+		public void Ankica_TestAddStockToPortfolios_GreaterThenNumOfShares()
+		{
+			// Dodaje se ista dionica u različiti portfelj - ukupno više od postojećeg broja 
+			_stockExchange = Factory.CreateStockExchange();
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 100, 10m, DateTime.Now);
+
+			string portfelj1 = "portfelj1";
+			_stockExchange.CreatePortfolio(portfelj1);
+			string portfelj2 = "portfelj2";
+			_stockExchange.CreatePortfolio(portfelj2);
+
+			_stockExchange.AddStockToPortfolio(portfelj1, dionica1, 50);
+			//_stockExchange.AddStockToPortfolio(portfelj2, dionica1, 150);   // OPREZ!!!!  u portfelju 2 ih treba biti samo 50 (jer ukupno u svim portfeljima mora biti 100)
+
+			Assert.IsTrue(_stockExchange.IsStockPartOfPortfolio(portfelj1, dionica1));
+			Assert.IsFalse(_stockExchange.IsStockPartOfPortfolio(portfelj2, dionica1));
+
+			Assert.AreEqual(1, _stockExchange.NumberOfStocksInPortfolio(portfelj1));
+			Assert.AreEqual(0, _stockExchange.NumberOfStocksInPortfolio(portfelj2));
+			Assert.AreEqual(50, _stockExchange.NumberOfSharesOfStockInPortfolio(portfelj1, dionica1));
+			Assert.AreEqual(0, _stockExchange.NumberOfSharesOfStockInPortfolio(portfelj2, dionica1));
+		}
+
+
+
+
+		// Ankica_TestComplicatedChanges_Values
+
+
+
+
+		// Ankica_TestCreateIndex_IllegalTypeNegative
+
+
+
+
+
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestCreateIndex_SameNameAlreadyExists()
+		{
+			// Dodaje se indeks imena koje već postoji na burzi, ali drugog tipa 
+			_stockExchange = Factory.CreateStockExchange();
+			string indeks1 = "indeks1";
+			_stockExchange.CreateIndex(indeks1, IndexTypes.AVERAGE);
+			_stockExchange.CreateIndex(indeks1, IndexTypes.WEIGHTED);
+		}
+
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestCreateIndex_SameNameAndTypeAlreadyExists()
+		{
+			// Dodaje se indeks koji već postoji na burzi
+			_stockExchange = Factory.CreateStockExchange();
+			string indeks1 = "indeks1";
+			_stockExchange.CreateIndex(indeks1, IndexTypes.AVERAGE);
+			_stockExchange.CreateIndex(indeks1, IndexTypes.AVERAGE);
+		}
+
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestCreateIndex_SimilarNameAlreadyExists()
+		{
+			// Dodaje se indeks koja već postoji na burzi ali s promjenom velika/mala slova u imenu 
+			_stockExchange = Factory.CreateStockExchange();
+			_stockExchange.CreateIndex("abc", IndexTypes.AVERAGE);
+			_stockExchange.CreateIndex("ABC", IndexTypes.AVERAGE);
+		}
+
+		[Test()]
+		public void Ankica_TestCreateIPortfolio_Simple()
+		{
+			// Dodaje se par portfelja i provjerava postoje li na burzi 
+			_stockExchange = Factory.CreateStockExchange();
+			string portfelj1 = "portfelj1";
+			_stockExchange.CreatePortfolio(portfelj1);
+			string portfelj2 = "portfelj2";
+			_stockExchange.CreatePortfolio(portfelj2);
+
+			Assert.IsTrue(_stockExchange.PortfolioExists(portfelj1));
+			Assert.IsTrue(_stockExchange.PortfolioExists(portfelj2));
+			Assert.AreEqual(2, _stockExchange.NumberOfPortfolios());
+		}
+
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestCreatePortfolio_SameIdAlreadyExists()
+		{
+			// Dodaje se portfelj koji već postoji na burzi 
+			_stockExchange = Factory.CreateStockExchange();
+			string portfelj1 = "portfelj1";
+			_stockExchange.CreatePortfolio(portfelj1);
+			_stockExchange.CreatePortfolio(portfelj1);
+
+		}
+
+		[Test()]
+		public void Ankica_TestCreatePortfolio_SimilarNameAlreadyExists()
+		{
+			// Dodaje se portfelj sličnog imena 
+			_stockExchange = Factory.CreateStockExchange();
+			string portfelj1 = "portfelj1";
+			_stockExchange.CreatePortfolio(portfelj1);
+			string portfelj2 = "Portfelj1";
+			_stockExchange.CreatePortfolio(portfelj2);
+
+			Assert.IsTrue(_stockExchange.PortfolioExists(portfelj1));
+			Assert.IsTrue(_stockExchange.PortfolioExists(portfelj2));
+			Assert.AreEqual(2, _stockExchange.NumberOfPortfolios());
+
+		}
+
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestDelistStock_EmptyStockExchange()
+		{
+			// Pokušaj micanja dionice s burze koja nema niti jednu dionicu 
+			_stockExchange = Factory.CreateStockExchange();
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 0, 10m, DateTime.Now);
+
+			// ak se ne varam, već bi kod dodavanja trebalo baciti exception
+		}
+
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestDelistStock_NotExist()
+		{
+			// Pokušaj micanja nepostojeće dionice s burze
+			_stockExchange = Factory.CreateStockExchange();
+			_stockExchange.DelistStock("nepostojecaDionica");
+		}
+
+		[Test()]
+		public void Ankica_TestDelistStock_Simple()
+		{
+			// Postojeća dionica miče se s burze
+			_stockExchange = Factory.CreateStockExchange();
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 1000000, 10m, DateTime.Now);
+
+			Assert.IsTrue(_stockExchange.StockExists(dionica1));
+			Assert.AreEqual(1, _stockExchange.NumberOfStocks());
+
+			_stockExchange.DelistStock(dionica1);
+
+			Assert.IsFalse(_stockExchange.StockExists(dionica1));
+			Assert.AreEqual(0, _stockExchange.NumberOfStocks());
+		}
+
+		[Test()]
+		public void Ankica_TestGetIndexValue_AfterDelistingStock()
+		{
+			// Provjera izračuna vrijednosti portfelja nakon brisanja dionice s burze
+			_stockExchange = Factory.CreateStockExchange();
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 100, 10m, DateTime.Now);
+			string dionica2 = "Dionica2";
+			_stockExchange.ListStock(dionica2, 100, 20m, DateTime.Now);
+
+
+			string portfelj1 = "portfelj1";
+			_stockExchange.CreatePortfolio(portfelj1);
+			_stockExchange.AddStockToPortfolio(portfelj1, dionica1, 10);
+			_stockExchange.AddStockToPortfolio(portfelj1, dionica2, 10);
+
+			Assert.AreEqual(300, _stockExchange.GetPortfolioValue(portfelj1, DateTime.Now));
+
+			_stockExchange.DelistStock(dionica1);
+
+			Assert.AreEqual(200, _stockExchange.GetPortfolioValue(portfelj1, DateTime.Now));
+		}
+
+		[Test()]
+		public void Ankica_TestGetIndexValue_Average()
+		{
+			// Provjera izračuna AverageIndexa 
+			_stockExchange = Factory.CreateStockExchange();
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 1000, 100m, DateTime.Now);
+			string dionica2 = "Dionica2";
+			_stockExchange.ListStock(dionica2, 1000, 200m, DateTime.Now);
+
+			string indeks1 = "indeks1";
+			_stockExchange.CreateIndex(indeks1, IndexTypes.AVERAGE);
+
+			_stockExchange.AddStockToIndex(indeks1, dionica1);
+			_stockExchange.AddStockToIndex(indeks1, dionica2);
+
+			Assert.AreEqual(150, _stockExchange.GetIndexValue(indeks1, DateTime.Now));
+
+		}
+
+		[Test()]
+		public void Ankica_TestGetIndexValue_AverageAfterDelistingStock()
+		{
+			// Provjera izračuna AverageIndeksa nakon brisanja dionice s burze
+			_stockExchange = Factory.CreateStockExchange();
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 1000, 100m, DateTime.Now);
+			string dionica2 = "Dionica2";
+			_stockExchange.ListStock(dionica2, 1000, 200m, DateTime.Now);
+
+			string indeks1 = "indeks1";
+			_stockExchange.CreateIndex(indeks1, IndexTypes.AVERAGE);
+
+			_stockExchange.AddStockToIndex(indeks1, dionica1);
+			_stockExchange.AddStockToIndex(indeks1, dionica2);
+
+			Assert.AreEqual(150, _stockExchange.GetIndexValue(indeks1, DateTime.Now));
+
+			_stockExchange.DelistStock(dionica2);
+
+			Assert.AreEqual(100, _stockExchange.GetIndexValue(indeks1, DateTime.Now));
+		}
+
+		[Test()]
+		public void Ankica_TestGetIndexValue_AverageAfterPriceChange()
+		{
+			// Provjera izračuna AverageIndexa nakon promijene cijene
+			_stockExchange = Factory.CreateStockExchange();
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 1000, 100m, new DateTime(2014, 1, 1, 0, 0, 0));
+			string dionica2 = "Dionica2";
+			_stockExchange.ListStock(dionica2, 1000, 200m, new DateTime(2014, 1, 1, 0, 0, 0));
+
+			string indeks1 = "indeks1";
+			_stockExchange.CreateIndex(indeks1, IndexTypes.AVERAGE);
+
+			_stockExchange.AddStockToIndex(indeks1, dionica1);
+			_stockExchange.AddStockToIndex(indeks1, dionica2);
+
+			Assert.AreEqual(150, _stockExchange.GetIndexValue(indeks1, new DateTime(2014, 1, 2, 0, 0, 0)));
+
+			_stockExchange.SetStockPrice(dionica2, new DateTime(2014, 1, 3, 0, 0, 0), 300m);
+
+			Assert.AreEqual(200, _stockExchange.GetIndexValue(indeks1, new DateTime(2014, 1, 4, 0, 0, 0)));
+		}
+
+		[Test()]
+		public void Ankica_TestGetIndexValue_AverageAfterRemovingStock()
+		{
+			// Provjera izračuna AverageIndeksa nakon brisanja dionice iz indeksa 
+			_stockExchange = Factory.CreateStockExchange();
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 1000, 100m, DateTime.Now);
+			string dionica2 = "Dionica2";
+			_stockExchange.ListStock(dionica2, 1000, 200m, DateTime.Now);
+
+			string indeks1 = "indeks1";
+			_stockExchange.CreateIndex(indeks1, IndexTypes.AVERAGE);
+
+			_stockExchange.AddStockToIndex(indeks1, dionica1);
+			_stockExchange.AddStockToIndex(indeks1, dionica2);
+
+			Assert.AreEqual(150, _stockExchange.GetIndexValue(indeks1, DateTime.Now));
+
+			_stockExchange.RemoveStockFromIndex(indeks1, dionica2);
+
+			Assert.AreEqual(100, _stockExchange.GetIndexValue(indeks1, DateTime.Now));
+		}
+
+		// Ankica_TestGetIndexValue_Begining 
+		[Test()]
+		public void Ankica_TestGetIndexValue_Begining()
+		{
+			// Postavljanje cijena u trenucima i dohvaćanje početne
+			_stockExchange = Factory.CreateStockExchange();
+			_stockExchange.CreateIndex("index", IndexTypes.AVERAGE);
+			Assert.AreEqual(0m, _stockExchange.GetIndexValue("index", DateTime.Now));
+		}
+
+		// Ankica_TestGetIndexValue_WeightedDecimal
+
+		[Test()]
+		public void Ankica_TestGetInitialStockPrice_RandomPrices()
+		{
+			// Postavljanje cijena u trenucima i dohvaćanje početne
+			_stockExchange = Factory.CreateStockExchange();
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 1000, 100m, new DateTime(2013, 1, 1, 1, 0, 0, 0));
+
+			_stockExchange.SetStockPrice(dionica1, new DateTime(2014, 1, 1, 1, 0, 0, 0), 200m);      // cijena nakon
+			_stockExchange.SetStockPrice(dionica1, new DateTime(2012, 1, 1, 1, 0, 0, 0), 300m);      // cijena prije - trebala bi biti inicijalna jer je najstarija
+
+			Assert.AreEqual(300m, _stockExchange.GetInitialStockPrice(dionica1));
+		}
+
+		[Test()]
+		public void Ankica_TestGetLastStockPrice_RandomPrices()
+		{
+			// Postavljanje cijena u trenucima i dohvaćanje zadnje
+			_stockExchange = Factory.CreateStockExchange();
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 1000, 100m, new DateTime(2013, 1, 1, 1, 0, 0, 0));
+
+			_stockExchange.SetStockPrice(dionica1, new DateTime(2014, 1, 1, 1, 0, 0, 0), 200m);      // cijena nakon - najnovija/zadnja
+			_stockExchange.SetStockPrice(dionica1, new DateTime(2012, 1, 1, 1, 0, 0, 0), 300m);      // cijena prije
+
+			Assert.AreEqual(200m, _stockExchange.GetLastStockPrice(dionica1));
+		}
+
+		// Ankica_TestGetPortfolioPercentChangeInValueForMonth_Complicated - rijeseno  u golemom
+
+		// Ankica_TestGetPortfolioPercentChangeInValueForMonth_InitialPrices
+		[Test()]
+		public void Ankica_TestGetPortfolioPercentChangeInValueForMonth_InitialPrices()
+		{
+			// provjera izračuna postotka mjesečne promjene
+			_stockExchange = Factory.CreateStockExchange();
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 1000, 100m, new DateTime(2014, 1, 1, 0, 0, 0, 0));       // 1.1.2014. 0:00 100kn
+
+			string portfolio1 = "portfolio1";
+			_stockExchange.CreatePortfolio(portfolio1);
+
+			_stockExchange.AddStockToPortfolio(portfolio1, dionica1, 100);
+
+			Assert.AreEqual(0, _stockExchange.GetPortfolioPercentChangeInValueForMonth(portfolio1, 2014, 1));  // 1. mjesec 2014.
+		}
+
+		// Ankica_TestGetPortfolioPercentChangeInValueForMonth_PriceChanges - rijeseno u golemom
+
+
+
+
+
+
+		[Test()]
+		public void Ankica_TestGetPortfolioPercentChangeInValueForMonth_Simple()
+		{
+			// provjera izračuna postotka mjesečne promjene
+			_stockExchange = Factory.CreateStockExchange();
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 1000, 100m, new DateTime(2014, 1, 1, 0, 0, 0, 0));       // 1.1.2014. 0:00 100kn
+
+			_stockExchange.SetStockPrice(dionica1, new DateTime(2014, 1, 31, 0, 0, 0, 0), 150);        // 15.1.2014. 0:00 150kn (+50%)
+
+			string portfolio1 = "portfolio1";
+			_stockExchange.CreatePortfolio(portfolio1);
+
+			_stockExchange.AddStockToPortfolio(portfolio1, dionica1, 100);
+
+			Assert.AreEqual(50, _stockExchange.GetPortfolioPercentChangeInValueForMonth(portfolio1, 2014, 1));  // 1. mjesec 2014.
+		}
+
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestGetPortfolioPercentChangeInValueForMonth_WrongDate()
+		{
+			// provjera izračuna postotka mjesečne promjene uz pogrešnu vrijednost datuma 
+			_stockExchange = Factory.CreateStockExchange();
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 1000, 100m, new DateTime(2014, 1, 1, 0, 0, 0, 0));       // 1.1.2014. 0:00 100kn
+
+			_stockExchange.SetStockPrice(dionica1, new DateTime(2014, 1, 31, 0, 0, 0, 0), 150);        // 15.1.2014. 0:00 150kn (+50%)
+
+			string portfolio1 = "portfolio1";
+			_stockExchange.CreatePortfolio(portfolio1);
+
+			_stockExchange.AddStockToPortfolio(portfolio1, dionica1, 100);
+
+			Assert.AreEqual(50, _stockExchange.GetPortfolioPercentChangeInValueForMonth(portfolio1, 2014, 20));  // 20. mjesec 2014. (krivi datum)
+		}
+
+		[Test()]
+		public void Ankica_TestGetPortfolioValue_AfterPriceChange()
+		{
+			// Provjera izračuna vrijednosti portfelja nakon promijene cijene 
+			_stockExchange = Factory.CreateStockExchange();
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 1000, 100m, new DateTime(2014, 1, 1, 0, 0, 0, 0));       // 1.1.2014. 0:00 100kn
+
+			string portfolio1 = "portfolio1";
+			_stockExchange.CreatePortfolio(portfolio1);
+
+			_stockExchange.AddStockToPortfolio(portfolio1, dionica1, 10);
+
+			Assert.AreEqual(1000, _stockExchange.GetPortfolioValue(portfolio1, new DateTime(2014, 3, 1, 0, 0, 0, 0)));  // 1.3.2014. 0:00   PROVJERA
+
+			_stockExchange.SetStockPrice(dionica1, new DateTime(2014, 1, 31, 0, 0, 0, 0), 200);                         // 1.2.2014. 0:00 200kn
+
+			Assert.AreEqual(2000, _stockExchange.GetPortfolioValue(portfolio1, new DateTime(2014, 3, 1, 0, 0, 0, 0)));  // 1.3.2014. 0:00
+		}
+
+		[Test()]
+		public void Ankica_TestGetPortfolioValue_AfterRemovingStock()
+		{
+			_stockExchange = Factory.CreateStockExchange();
+			// Provjera izračuna vrijednosta portfelja nakon brisanja dionice iz portfolia 
+
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 1000, 100m, new DateTime(2014, 1, 1, 0, 0, 0, 0));       // 1.1.2014. 0:00 100kn
+			string dionica2 = "Dionica2";
+			_stockExchange.ListStock(dionica2, 1000, 100m, new DateTime(2014, 1, 1, 0, 0, 0, 0));       // 1.1.2014. 0:00 100kn
+
+			string portfolio1 = "portfolio1";
+			_stockExchange.CreatePortfolio(portfolio1);
+
+			_stockExchange.AddStockToPortfolio(portfolio1, dionica1, 10);
+			_stockExchange.AddStockToPortfolio(portfolio1, dionica2, 10);
+
+			Assert.AreEqual(2000, _stockExchange.GetPortfolioValue(portfolio1, new DateTime(2014, 3, 1, 0, 0, 0, 0)));  // 1.3.2014. 0:00   PROVJERA
+
+			_stockExchange.RemoveStockFromPortfolio(portfolio1, dionica2);
+
+			Assert.AreEqual(1000, _stockExchange.GetPortfolioValue(portfolio1, new DateTime(2014, 3, 1, 0, 0, 0, 0)));  // 1.3.2014. 0:00
+		}
+
+		[Test()]
+		public void Ankica_TestGetPortfolioValue_Begining()
+		{
+			// Provjera izračuna vrijednosti portfelja na početku
+			_stockExchange = Factory.CreateStockExchange();
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 1000, 100m, new DateTime(2014, 1, 1, 0, 0, 0, 0));       // 1.1.2014. 0:00 100kn
+			string dionica2 = "Dionica2";
+			_stockExchange.ListStock(dionica2, 1000, 100m, new DateTime(2014, 1, 1, 0, 0, 0, 0));       // 1.1.2014. 0:00 100kn
+
+			string portfolio1 = "portfolio1";
+			_stockExchange.CreatePortfolio(portfolio1);
+
+			_stockExchange.AddStockToPortfolio(portfolio1, dionica1, 10);
+			_stockExchange.AddStockToPortfolio(portfolio1, dionica2, 10);
+
+			Assert.AreEqual(2000, _stockExchange.GetPortfolioValue(portfolio1, new DateTime(2014, 3, 1, 0, 0, 0, 0)));  // 1.3.2014. 0:00   PROVJERA
+		}
+
+
+
+
+
+
+
+		// Ankica_TestGetPortfolioValue_Begining - rijeseno 
+		[Test()]
+		public void Ankica_TestGetPortfolioValue_BeginingNull()
+		{
+			_stockExchange = Factory.CreateStockExchange();
+			// Briše se dionica iz nepostojećeg portfelja 
+			string stock1 = "Dionica1";
+			_stockExchange.ListStock(stock1, 10, 100m, new DateTime(2013, 1, 1, 10, 00, 00));
+
+			string portfelj1 = "Portfelj1";
+			_stockExchange.CreatePortfolio(portfelj1);
+			Assert.AreEqual(_stockExchange.GetPortfolioValue(portfelj1, DateTime.Now), 0);
+		}
+
+		// Ankica_TestGetPortfolioValue_Sum - rijeseno
+
+		// Ankica_TestGetStockPrice_BeforeAlPrices - acc dolje xD
+
+		// Ankica_TestGetStockPrice_BeforeInitialPrice
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestGetStockPrice_BeforeInitialPrice()
+		{
+			// Dodaje se dionica s negativnim brojem dionica
+			_stockExchange = Factory.CreateStockExchange();
+			_stockExchange.ListStock("IBM", 10, 10m, DateTime.Now);
+			Assert.AreEqual(_stockExchange.GetStockPrice("ibM", DateTime.Now), 10m);
+			_stockExchange.SetStockPrice("IBM", new DateTime(2014, 12, 14, 22, 22, 22, 999), 100m);
+			Assert.AreEqual(_stockExchange.GetStockPrice("ibM", new DateTime(2014, 12, 14, 22, 22, 22, 999)), 100m);
+			_stockExchange.SetStockPrice("IBM", new DateTime(2014, 12, 14, 21, 22, 22, 999), 200m);
+			Assert.AreEqual(_stockExchange.GetStockPrice("IBM",new DateTime(2013,1,1,1,1,1,111)), 10m);
+		}
+
+
+		// Ankica_TestGetStockPrice_InitialPrice
+		[Test()]
+		public void Ankica_TestGetStockPrice_InitialPrice()
+		{
+			// Dodaje se dionica s negativnim brojem dionica
+			_stockExchange = Factory.CreateStockExchange();
+			_stockExchange.ListStock("IBM", 10, 10m, DateTime.Now);
+			Assert.AreEqual(_stockExchange.GetStockPrice("ibM", DateTime.Now), 10m);
+			_stockExchange.SetStockPrice("IBM", new DateTime(2015, 12, 14, 22, 22, 22, 999), 100m);
+			Assert.AreEqual(_stockExchange.GetStockPrice("ibM", new DateTime(2015, 12, 14, 22, 22, 22, 999)), 100m);
+			_stockExchange.SetStockPrice("IBM", new DateTime(2015, 12, 14, 21, 22, 22, 999), 200m);
+			Assert.AreEqual(_stockExchange.GetInitialStockPrice("IBM"), 10m);
+		}
+
+		// Ankica_TestGetStockPrice_MorePrices
+		// Ankica_TestGetStockPrice_LastPrice
+		[Test()]
+		public void Ankica_TestGetStockPrice_LastPrice()
+		{
+			// Dodaje se dionica s negativnim brojem dionica
+			_stockExchange = Factory.CreateStockExchange();
+			_stockExchange.ListStock("IBM", 10, 10m, DateTime.Now);
+			Assert.AreEqual(_stockExchange.GetStockPrice("ibM", DateTime.Now), 10m);
+			_stockExchange.SetStockPrice("IBM", new DateTime(2015, 12, 14, 22, 22, 22, 999), 100m);
+			Assert.AreEqual(_stockExchange.GetStockPrice("ibM", new DateTime(2015, 12, 14, 22, 22, 22, 999)), 100m);
+			_stockExchange.SetStockPrice("IBM", new DateTime(2015, 12, 14, 21, 22, 22, 999), 200m);
+			Assert.AreEqual(_stockExchange.GetLastStockPrice("IBM"), 100m);
+		}
+
+		// Ankica_TestGetStockPrice_RandomPrices
+		[Test()]
+		public void Ankica_TestGetStockPrice_RandomPrices()
+		{
+			// Dodaje se dionica s negativnim brojem dionica
+			_stockExchange = Factory.CreateStockExchange();
+			_stockExchange.ListStock("IBM", 10, 10m, DateTime.Now);
+			Assert.AreEqual(_stockExchange.GetStockPrice("ibM", DateTime.Now), 10m);
+			_stockExchange.SetStockPrice("IBM", new DateTime(2014,12,14,22,22,22,999), 100m);
+			Assert.AreEqual(_stockExchange.GetStockPrice("ibM", new DateTime(2014, 12, 14, 22, 22, 22, 999)), 100m);
+		}
+
+		// Ankica_TestGetStockPrice_SimilarName
+		[Test()]
+		public void Ankica_TestGetStockPrice_SimilarName()
+		{
+			// Dodaje se dionica s negativnim brojem dionica
+			_stockExchange = Factory.CreateStockExchange();
+			_stockExchange.ListStock("IBM", 10, 10m, DateTime.Now);
+			Assert.AreEqual(_stockExchange.GetStockPrice("ibM", DateTime.Now), 10m);
+		}
+
+
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestListStock_IllegalNumberOfSharesNegative()
+		{
+			// Dodaje se dionica s negativnim brojem dionica
+			_stockExchange = Factory.CreateStockExchange();
+			_stockExchange.ListStock("IBM", -10, 10m, DateTime.Now);
+		}
+
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestListStock_IllegalNumberOfSharesNull()
+		{
+			// Dodaje se dionica s 0 dionica
+			_stockExchange = Factory.CreateStockExchange();
+			_stockExchange.ListStock("IBM", 0, 10m, DateTime.Now);
+		}
+
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestListStock_IllegalPriceNull()
+		{
+			_stockExchange = Factory.CreateStockExchange();
+			_stockExchange.ListStock("IBM", 1000000, 0m, DateTime.Now);
+		}
+
+		// Ankica_TestListStock_SimilarNameAlreadyExists - već u golemom :D
+
+		[Test()]
+		public void Ankica_TestListStock_Simple()
+		{
+			_stockExchange = Factory.CreateStockExchange();
+			Assert.AreEqual(0, _stockExchange.NumberOfStocks());
+			string firstStockName = "IBM";
+			_stockExchange.ListStock(firstStockName, 1000000, 10m, DateTime.Now);
+
+			Assert.AreEqual(1, _stockExchange.NumberOfStocks());
+			Assert.IsTrue(_stockExchange.StockExists(firstStockName));
+			Assert.IsFalse(_stockExchange.StockExists("Bezveze"));
+
+			string secondStockName = "MSFT";
+			_stockExchange.ListStock(secondStockName, 100000, 15m, DateTime.Now);
+			Assert.AreEqual(2, _stockExchange.NumberOfStocks());
+			Assert.IsTrue(_stockExchange.StockExists(secondStockName));
+		}
+
+		// Ankica_TestNumberOfStocksInIndex_NoStocks - već u golemom
+
+
+		// Ankica_TestNumberOfStocksInPortfolio_NoStocks - već u golemom
+
+
+		// Ankica_TestRemoveStockFromIndex_MoreIndices - već u golemom
+
+
+
+
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestRemoveStockFromIndex_NonExistingIndex()
+		{
+			_stockExchange = Factory.CreateStockExchange();
+			// Briše se dionica iz nepostojećeg indeksa
+
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 1000000, 10m, DateTime.Now);
+
+			_stockExchange.RemoveStockFromIndex("nepostojeciIndeks", dionica1);
+		}
+
+		// Ankica_TestRemoveStockFromIndex_NonExistingStock
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestRemoveStockFromIndex_NonExistingStock()
+		{
+			_stockExchange = Factory.CreateStockExchange();
+			// Briše se dionica iz nepostojećeg portfelja 
+			string stock1 = "Dionica1";
+			_stockExchange.ListStock(stock1, 10, 100m, new DateTime(2013, 1, 1, 10, 00, 00));
+
+			string index = "Portfelj1";
+			_stockExchange.CreateIndex(index, IndexTypes.AVERAGE);
+			_stockExchange.AddStockToIndex(index, stock1);
+			_stockExchange.RemoveStockFromIndex(index, "bla");
+		}
+
+		// Ankica_TestRemoveStockFromIndex_Twice
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestRemoveStockFromIndex_Twice()
+		{
+			_stockExchange = Factory.CreateStockExchange();
+			// Briše se dionica iz nepostojećeg portfelja 
+			string stock1 = "Dionica1";
+			_stockExchange.ListStock(stock1, 10, 100m, new DateTime(2013, 1, 1, 10, 00, 00));
+
+			string index = "Portfelj1";
+			_stockExchange.CreateIndex(index, IndexTypes.AVERAGE);
+			_stockExchange.AddStockToIndex(index, stock1);
+			_stockExchange.RemoveStockFromIndex(index, stock1);
+			_stockExchange.RemoveStockFromIndex(index, stock1);
+		}
+		// Ankica_TestRemoveStockFromPortfolio_All
+		[Test()]
+		public void Ankica_TestRemoveStockFromPortfolio_All()
+		{
+			_stockExchange = Factory.CreateStockExchange();
+			// Briše se dionica iz nepostojećeg portfelja 
+			string stock1 = "Dionica1";
+			_stockExchange.ListStock(stock1, 10, 100m, new DateTime(2013, 1, 1, 10, 00, 00));
+
+			string portfelj1 = "Portfelj1";
+			_stockExchange.CreatePortfolio(portfelj1);
+			_stockExchange.AddStockToPortfolio(portfelj1, stock1, 1);
+			_stockExchange.RemoveStockFromPortfolio(portfelj1, stock1, 1);
+			Assert.AreEqual(_stockExchange.NumberOfSharesOfStockInPortfolio(portfelj1, stock1), 0);
+		}
+
+		// Ankica_TestRemoveStockFromPortfolio_AllTwice
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestRemoveStockFromPortfolio_AllTwice()
+		{
+			_stockExchange = Factory.CreateStockExchange();
+			// Briše se dionica iz nepostojećeg portfelja 
+			string stock1 = "Dionica1";
+			_stockExchange.ListStock(stock1, 10, 100m, new DateTime(2013, 1, 1, 10, 00, 00));
+
+			string portfelj1 = "Portfelj1";
+			_stockExchange.CreatePortfolio(portfelj1);
+			_stockExchange.AddStockToPortfolio(portfelj1, stock1, 1);
+			_stockExchange.RemoveStockFromPortfolio(portfelj1, stock1, 1);
+			_stockExchange.RemoveStockFromPortfolio(portfelj1, stock1, 1);
+		}
+
+
+
+
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestRemoveStockFromPortfolio_NonExistingPortfolio()
+		{
+			_stockExchange = Factory.CreateStockExchange();
+			// Briše se dionica iz nepostojećeg portfelja 
+
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 1000000, 10m, DateTime.Now);
+
+			_stockExchange.RemoveStockFromPortfolio("nepostojeciPortfelj", dionica1);
+		}
+
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestSetStockPrice_DifferentName()
+		{
+			_stockExchange = Factory.CreateStockExchange();
+			// postavljanje cijene dionice sa drugačijim imenom 
+
+			decimal oldPrice = 10m;
+			_stockExchange.ListStock("IBM", 1000000, oldPrice, new DateTime(2012, 1, 10, 15, 22, 00));
+
+			decimal newPrice = 20m;
+			_stockExchange.SetStockPrice("KRIVO_IME", new DateTime(2012, 1, 10, 15, 40, 00), newPrice);
+		}
+
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestSetStockPrice_SameTimeStamp()
+		{
+			_stockExchange = Factory.CreateStockExchange();
+			// Pokušaj dodavanja cijene za trenutak koji već postoji
+
+			_stockExchange.ListStock("IBM", 1000000, 10m, DateTime.Now);
+
+			decimal cijena = 10m;
+			_stockExchange.SetStockPrice("IBM", new DateTime(2012, 1, 10, 15, 40, 00), cijena);
+			_stockExchange.SetStockPrice("IBM", new DateTime(2012, 1, 10, 15, 40, 00), cijena);
+		}
+
+		[Test()]
+		public void Ankica_TestSetStockPrice_SimilarName()
+		{
+			_stockExchange = Factory.CreateStockExchange();
+			// Postavljanje cijene dionice sa sličnim imenom
+
+			_stockExchange.ListStock("IBM", 1000000, 10m, DateTime.Now);
+
+			decimal novaCijena = 20m;
+			_stockExchange.SetStockPrice("IbM", new DateTime(2012, 1, 10, 15, 40, 00), novaCijena);
+			Assert.AreEqual(novaCijena, _stockExchange.GetStockPrice("IBM", new DateTime(2012, 1, 10, 15, 40, 00)));
+		}
+
+		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
+		public void Ankica_TestSetStockPrice_StockNotExists()
+		{
+			_stockExchange = Factory.CreateStockExchange();
+			// Pokušaj postavljanja cijene dionici koja ne postoji
+			_stockExchange.ListStock("IBM", 1000000, 10m, DateTime.Now);
+
+			decimal cijena = 10m;
+			_stockExchange.SetStockPrice("KRIVO_IME", new DateTime(2012, 1, 10, 15, 40, 00), cijena);
+		}
+
+		[Test()]
+		public void Ankica_TestGetPortfolioPercentChangeInValueForMonth_PriceChanges()
+		{
+			_stockExchange = Factory.CreateStockExchange();
+			// provjera izračuna postotka mjesečne promjene
+			string dionica1 = "Dionica1";
+			_stockExchange.ListStock(dionica1, 1000, 100, new DateTime(2014, 1, 1, 0, 0, 0, 0));       // 1.1.2014. 0:00 100kn
+			string dionica2 = "Dionica12";
+			_stockExchange.ListStock(dionica2, 1000, 100, new DateTime(2014, 1, 1, 0, 0, 0, 0));
+			string dionica3 = "Dionica13";
+			_stockExchange.ListStock(dionica3, 1000, 100, new DateTime(2014, 1, 1, 0, 0, 0, 0));
+			string dionica4 = "Dionica14";
+			_stockExchange.ListStock(dionica4, 1000, 100, new DateTime(2014, 1, 1, 0, 0, 0, 0));
+			_stockExchange.SetStockPrice(dionica1, new DateTime(2014, 1, 30, 23, 59, 59), 150);        // 31.1.2014. 0:00 150kn (+50%)
+			_stockExchange.SetStockPrice(dionica2, new DateTime(2014, 1, 30, 23, 59, 59), 150);        // 31.1.2014. 0:00 150kn (+50%)
+			_stockExchange.SetStockPrice(dionica3, new DateTime(2014, 1, 30, 23, 59, 59), 150);        // 31.1.2014. 0:00 150kn (+50%)
+			_stockExchange.SetStockPrice(dionica4, new DateTime(2014, 1, 30, 23, 59, 59), 150);        // 31.1.2014. 0:00 150kn (+50%)
+			string portfolio1 = "portfolio1";
+			_stockExchange.CreatePortfolio(portfolio1);
+			_stockExchange.AddStockToPortfolio(portfolio1, dionica1, 1);
+			_stockExchange.AddStockToPortfolio(portfolio1, dionica1, 1);
+			_stockExchange.AddStockToPortfolio(portfolio1, dionica2, 1);
+			_stockExchange.AddStockToPortfolio(portfolio1, dionica3, 1);
+			_stockExchange.AddStockToPortfolio(portfolio1, dionica4, 1);
+			Assert.AreEqual(50, _stockExchange.GetPortfolioPercentChangeInValueForMonth(portfolio1, 2014, 1));  // 1. mjesec 2014.
+		}
+
 
 	}
 }

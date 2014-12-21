@@ -34,7 +34,7 @@ namespace DrugaDomacaZadaca_Burza
 
 		public Stock(string stockName, long quantity, decimal stockPrice, DateTime timestamp)
 		{
-			if (stockName == null){
+			if (String.IsNullOrEmpty(stockName)){
 				throw new StockExchangeException("Stock name must exist.");
 			}
 
@@ -115,7 +115,7 @@ namespace DrugaDomacaZadaca_Burza
 
 		public StockIndex(string inIndexName){
 
-			if (inIndexName == null){
+			if (String.IsNullOrEmpty(inIndexName)){
 				throw new StockExchangeException("stockIndex name must exist.");
 			}
 
@@ -160,7 +160,7 @@ namespace DrugaDomacaZadaca_Burza
 			return this.stocks.Count ();
 		}
 
-		abstract public decimal GetIndexValue (DateTime inTimeStamp, decimal stockExchangeValue);
+		abstract public decimal GetIndexValue (DateTime inTimeStamp);
 	}
 
 
@@ -174,24 +174,31 @@ namespace DrugaDomacaZadaca_Burza
 			this.indexType = IndexTypes.WEIGHTED;
 		}
 
-		public override decimal GetIndexValue(DateTime inTimeStamp, decimal stockExchangeValue){
+		public override decimal GetIndexValue(DateTime inTimeStamp){
 			decimal totalIndexValue = 0;
 			decimal stockShare = 0;
 			decimal stockPrice = 0;
+			decimal weightedValue = 0;
 
 			if (this.NumberOfStocksInIndex() == 0){
-				return totalIndexValue;
+				return weightedValue;
+			}
+
+			foreach (var stock in this.stocks){
+				stockPrice = stock.Value.GetStockPrice(inTimeStamp);
+				totalIndexValue += stock.Value.getStockQuantity() * stockPrice;
+
 			}
 
 			foreach (var stock in this.stocks) {
 				stockPrice = stock.Value.GetStockPrice(inTimeStamp);
 
-				stockShare = (stockPrice * stock.Value.getStockQuantity()) / stockExchangeValue;
+				stockShare = (stockPrice * stock.Value.getStockQuantity()) / totalIndexValue;
 
-				totalIndexValue += (stockPrice * stockShare);
+				weightedValue += (stockPrice * stockShare);
 			}
 
-			return Decimal.Round(totalIndexValue, 3);
+			return Decimal.Round(weightedValue, 3);
 		}
 	}
 
@@ -206,7 +213,7 @@ namespace DrugaDomacaZadaca_Burza
 			this.indexType = IndexTypes.AVERAGE;
 		}
 
-		public override decimal GetIndexValue(DateTime inTimestamp, decimal stockExchangeValue){
+		public override decimal GetIndexValue(DateTime inTimestamp){
 			decimal totalIndexValue = 0;
 			decimal numberOfStocks = Convert.ToDecimal(this.NumberOfStocksInIndex ());
 
@@ -232,7 +239,7 @@ namespace DrugaDomacaZadaca_Burza
 		private Dictionary<string, int> stockShares;
 
 		public Portfolio(string inPortfolioID){
-			if (inPortfolioID == null) {
+			if (String.IsNullOrEmpty(inPortfolioID)) {
 				throw new StockExchangeException ("Portforlio must have a name");
 			}
 
@@ -432,7 +439,7 @@ namespace DrugaDomacaZadaca_Burza
 			}
 
 			this.stocks.Remove (unifiedName);
-			this.stocks.Remove (unifiedName);
+			this.soldStocks.Remove (unifiedName);
 
 		}
 
@@ -590,7 +597,7 @@ namespace DrugaDomacaZadaca_Burza
 			string unifiedIndexName = unifyName (inIndexName);
 			StockIndex stockIndex = getStockIndexFromStockExchange (unifiedIndexName);
 
-			return stockIndex.GetIndexValue (roundedTS, getStockExchangeValue(roundedTS));
+			return stockIndex.GetIndexValue (roundedTS);
 		}
 
 		public bool IndexExists(string inIndexName)
