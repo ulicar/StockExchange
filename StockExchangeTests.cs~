@@ -279,7 +279,6 @@ namespace DrugaDomacaZadaca_Burza
 		}
 
 		[Test()]
-		[ExpectedException(typeof(StockExchangeException))]
 		public void Test_AddStockToPortfolio_Complicated()
 		{
 			// Dodaju se dionice u portfelj, onda se jedna obriše s burze i pokuša se dohvatiti u portfelju
@@ -300,9 +299,10 @@ namespace DrugaDomacaZadaca_Burza
 
 			_stockExchange.DelistStock (dionica1);
 
-			_stockExchange.IsStockPartOfPortfolio (portfelj1, dionica1);   // treba baciti Exception		}
+			Assert.False(_stockExchange.IsStockPartOfPortfolio (portfelj1, dionica1));   // treba baciti Exception		}
 		}
 		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
 		public void Test_AddStockToPortfolio_GreaterThenNumOfShares()
 		{
 			// Dodaje se ista dionica više puta u portfelj - ukupno više od postojećeg broja 
@@ -314,7 +314,7 @@ namespace DrugaDomacaZadaca_Burza
 			_stockExchange.CreatePortfolio(portfelj1);
 
 			_stockExchange.AddStockToPortfolio(portfelj1, dionica1, 50);
-			_stockExchange.AddStockToPortfolio(portfelj1, dionica1, 150);   // previše ih dodamo, treba ih dodati još 50 (ukupno ih mora biti 100)
+			_stockExchange.AddStockToPortfolio(portfelj1, dionica1, 150);   // TODO: previše ih dodamo, treba ih dodati još 50 (ukupno ih mora biti 100)
 
 			Assert.True(_stockExchange.IsStockPartOfPortfolio(portfelj1, dionica1));
 			Assert.AreEqual(100, _stockExchange.NumberOfSharesOfStockInPortfolio(portfelj1, dionica1));
@@ -426,6 +426,7 @@ namespace DrugaDomacaZadaca_Burza
 		}
 
 		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
 		public void Test_AddStockToPortfolios_GreaterThenNumOfShares()
 		{
 			// Dodaje se ista dionica u različiti portfelj - ukupno više od postojećeg broja 
@@ -455,6 +456,7 @@ namespace DrugaDomacaZadaca_Burza
 
 		// Test_ComplicatedChanges_Values
 		[Test()]
+		[ExpectedException(typeof(StockExchangeException))]
 		public void Test_ComplicatedChanges_Values()
 		{
 			string dionica1 = "Dionica1";
@@ -478,8 +480,6 @@ namespace DrugaDomacaZadaca_Burza
 			_stockExchange.AddStockToIndex (index1, "dIONica1");
 
 			Assert.AreEqual( 70m ,_stockExchange.GetPortfolioValue (portfelj2, DateTime.Now));
-
-			//TODO:
 
 
 		}
@@ -898,16 +898,16 @@ namespace DrugaDomacaZadaca_Burza
 				string dionica1 = "Dionica1";
 				_stockExchange.ListStock(dionica1, 1000, 100, new DateTime(2014, 1, 1, 0, 0, 0, 0));       // 1.1.2014. 0:00 100kn
 				string dionica2 = "Dionica12";
-				_stockExchange.ListStock(dionica1, 1000, 100, new DateTime(2014, 1, 1, 0, 0, 0, 0)); 
+				_stockExchange.ListStock(dionica2, 1000, 100, new DateTime(2014, 1, 1, 0, 0, 0, 0)); 
 				string dionica3 = "Dionica13";
-				_stockExchange.ListStock(dionica1, 1000, 100, new DateTime(2014, 1, 1, 0, 0, 0, 0)); 
+				_stockExchange.ListStock(dionica3, 1000, 100, new DateTime(2014, 1, 1, 0, 0, 0, 0)); 
 				string dionica4 = "Dionica14";
-				_stockExchange.ListStock(dionica1, 1000, 100, new DateTime(2014, 1, 1, 0, 0, 0, 0)); 
+				_stockExchange.ListStock(dionica4, 1000, 100, new DateTime(2014, 1, 1, 0, 0, 0, 0)); 
 
 				_stockExchange.SetStockPrice(dionica1, new DateTime(2014, 1, 30, 23, 59, 59), 150);        // 31.1.2014. 0:00 150kn (+50%)
-				_stockExchange.SetStockPrice(dionica1, new DateTime(2014, 1, 30, 23, 59, 59), 150);        // 31.1.2014. 0:00 150kn (+50%)
-				_stockExchange.SetStockPrice(dionica1, new DateTime(2014, 1, 30, 23, 59, 59), 150);        // 31.1.2014. 0:00 150kn (+50%)
-				_stockExchange.SetStockPrice(dionica1, new DateTime(2014, 1, 30, 23, 59, 59), 150);        // 31.1.2014. 0:00 150kn (+50%)
+				_stockExchange.SetStockPrice(dionica2, new DateTime(2014, 1, 30, 23, 59, 59), 150);        // 31.1.2014. 0:00 150kn (+50%)
+				_stockExchange.SetStockPrice(dionica3, new DateTime(2014, 1, 30, 23, 59, 59), 150);        // 31.1.2014. 0:00 150kn (+50%)
+				_stockExchange.SetStockPrice(dionica4, new DateTime(2014, 1, 30, 23, 59, 59), 150);        // 31.1.2014. 0:00 150kn (+50%)
 
 
 				string portfolio1 = "portfolio1";
@@ -919,7 +919,7 @@ namespace DrugaDomacaZadaca_Burza
 				_stockExchange.AddStockToPortfolio(portfolio1, dionica3, 1);
 				_stockExchange.AddStockToPortfolio(portfolio1, dionica4, 1);
 
-				Assert.AreEqual(250, _stockExchange.GetPortfolioPercentChangeInValueForMonth(portfolio1, 2014, 1));  // 1. mjesec 2014.
+				Assert.AreEqual(50, _stockExchange.GetPortfolioPercentChangeInValueForMonth(portfolio1, 2014, 1));  // 1. mjesec 2014.
 			}
 
 
@@ -1319,12 +1319,13 @@ namespace DrugaDomacaZadaca_Burza
 			{
 				string dionica1 = "Dionica1";
 				_stockExchange.ListStock(dionica1, 1000000, 10m, DateTime.Now);
-				string Index = "index";
+				string port = "port";
 
-				_stockExchange.AddStockToPortfolio(Index, dionica1, 100);
-			_stockExchange.RemoveStockFromPortfolio(Index, dionica1, 100);
+			_stockExchange.CreatePortfolio (port);
+			_stockExchange.AddStockToPortfolio(port, dionica1, 100);
+			_stockExchange.RemoveStockFromPortfolio(port, dionica1, 100);
 
-			Assert.AreEqual( 0, _stockExchange.NumberOfStocksInPortfolio(Index));
+			Assert.AreEqual( 0, _stockExchange.NumberOfStocksInPortfolio(port));
 
 			}
 

@@ -236,14 +236,20 @@ public void AddStockToPortfolio(string inPortfolioID, string inStockName, int nu
 {
 	Portfolio portfolio = this.getPortfolioFromStockExchange (inPortfolioID);
 	Stock stock = getStockFromStockExchange (inStockName);
+	int stocksSharesSold = 0;
 
-	#TODO: stao ovdje
-	int sharesToAdd = numberOfShares;
-	if (portfolio.NumberOfSharesOfStockInPortfolio (inStockName) + numberOfShares > Convert.ToInt32 (this.stocks [stock])) {
-		sharesToAdd = Convert.ToInt32(this.stocks[stock]) - portfolio.NumberOfSharesOfStockInPortfolio (inStockName);
+	if (this.soldStocks.ContainsKey (inStockName)) {
+		stocksSharesSold = this.soldStocks [inStockName];
+	} else {
+		this.soldStocks.Add (inStockName, stocksSharesSold); 
 	}
 
-	portfolio.AddStockToPortfolio (stock, sharesToAdd);
+	if (stocksSharesSold + numberOfShares  > Convert.ToInt(stock.getStockQuantity()) ){
+			throw new StockExchangeException("Not enough stocks");
+	}
+
+	portfolio.AddStockToPortfolio(stock, numberOfShares);
+	this.soldStocks [stock] += numberOfShares;
 }
 
 public void RemoveStockFromPortfolio(string inPortfolioID, string inStockName, int numberOfShares)
@@ -273,13 +279,7 @@ public int NumberOfStocksInPortfolio(string inPortfolioID)
 
 public bool PortfolioExists(string inPortfolioID)
 {
-	try {
-		getPortfolioFromStockExchange(inPortfolioID);
-		return true;
-
-	} catch (StockExchangeException) {
-		return false;
-	}
+	return this.portfolios.ContainsKey (inPortfolioID);
 }
 
 public bool IsStockPartOfPortfolio(string inPortfolioID, string inStockName)
@@ -297,13 +297,14 @@ public int NumberOfSharesOfStockInPortfolio(string inPortfolioID, string inStock
 public decimal GetPortfolioValue(string inPortfolioID, DateTime timeStamp)
 {
 	Portfolio portfolio = this.getPortfolioFromStockExchange (inPortfolioID);
-	return portfolio.GetPortfolioValue (timeStamp);
+	DateTime roundedTS = roundTimestamp (inTimeStamp);
+	
+	return portfolio.GetPortfolioValue (roundedTS);
 }
 
 public decimal GetPortfolioPercentChangeInValueForMonth(string inPortfolioID, int Year, int Month)
 {
 	Portfolio portfolio = this.getPortfolioFromStockExchange (inPortfolioID);
 	return portfolio.GetPortfolioPercentChangeInValueForMonth (Year, Month);
-}
 }
 }

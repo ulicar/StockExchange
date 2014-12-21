@@ -37,10 +37,6 @@
     <Compile Include="StockExchange.cs" />
     <Compile Include="IStockExchange.cs" />
     <Compile Include="StockExchange_Example.cs" />
-    <Compile Include="Stock.cs" />
-    <Compile Include="StockIndex.cs" />
-    <Compile Include="Portfolio.cs" />
-    <Compile Include="StEx.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="nunit.framework" />

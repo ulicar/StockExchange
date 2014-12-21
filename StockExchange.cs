@@ -23,15 +23,16 @@ namespace DrugaDomacaZadaca_Burza
 		Decimal GetInitialStockPrice ();
 
 	}
-	
-
-
+	/// <summary>
+	/// Stock.
+	/// </summary>
 	public class Stock : IStock
 	{
 		private string stockName;
 		private Dictionary<DateTime,Decimal> stockPrice;
+		private long quantity;
 
-		public Stock(string stockName, decimal stockPrice, DateTime timestamp)
+		public Stock(string stockName, long quantity, decimal stockPrice, DateTime timestamp)
 		{
 			if (stockName == null){
 				throw new StockExchangeException("Stock name must exist.");
@@ -41,13 +42,20 @@ namespace DrugaDomacaZadaca_Burza
 				throw new StockExchangeException("Stock price must positive.");
 			}
 
+			if (quantity <= 0) {
+				throw new StockExchangeException("Stock quantity must positive.");
+			}
+
 			this.stockPrice = new Dictionary<DateTime, decimal> ();
 
 			this.stockName = stockName;
-			this.stockPrice[roundTimestamp(timestamp)] = stockPrice;
+			this.quantity = quantity;
+			this.stockPrice[timestamp] = stockPrice;
 		}
 
-
+		public long getStockQuantity(){
+			return this.quantity;
+		}
 
 		public string getStockName(){
 			return stockName;
@@ -63,24 +71,19 @@ namespace DrugaDomacaZadaca_Burza
 				throw new StockExchangeException("Already exist value for that time");
 			}
 
-			/*if (this.stockPrice.Keys.Min () > inTimeStamp) {
-				throw new StockExchangeException("Request from the past");
-			}*/
-
 			this.stockPrice[inTimeStamp] = inStockValue;
 		}
 
 		public Decimal GetStockPrice(DateTime inTimeStamp) //dohvaća cijenu dionice za neko vrijeme
 		{
-			Dictionary<DateTime, decimal> stockPricesBeforeSelectedTime = 
+			Dictionary<DateTime, decimal> allStocksPricesBeforeSelectedTime = 
 				this.stockPrice.Where (x => x.Key <= inTimeStamp).ToDictionary (x => x.Key, x => x.Value);
 
-			if (stockPricesBeforeSelectedTime.Count == 0) {
+			if (allStocksPricesBeforeSelectedTime.Count == 0) {
 				throw new StockExchangeException ("Referenced a stock value before the stock was created");
 			}
 
-
-			DateTime timeStampForSelectedTime = stockPricesBeforeSelectedTime.Keys.Max ();
+			DateTime timeStampForSelectedTime = allStocksPricesBeforeSelectedTime.Keys.Max ();
 
 			return this.stockPrice [timeStampForSelectedTime];
 
@@ -101,19 +104,23 @@ namespace DrugaDomacaZadaca_Burza
 	}
 
 
-
-
+	/// <summary>
+	/// Stock index.
+	/// </summary>
 	abstract public class StockIndex
 	{
-		protected List<Stock> stocks;
+		protected Dictionary<string, Stock> stocks;
 		protected string indexName;
 		protected IndexTypes indexType;
 
-
 		public StockIndex(string inIndexName){
-			this.indexName = inIndexName;
 
-			this.stocks = new List<Stock> ();
+			if (inIndexName == null){
+				throw new StockExchangeException("stockIndex name must exist.");
+			}
+
+			this.indexName = inIndexName;
+			this.stocks = new Dictionary<string, Stock> ();
 		}
 
 		public string getStockIndexName(){
@@ -121,33 +128,31 @@ namespace DrugaDomacaZadaca_Burza
 		}
 
 		private Stock getStockFromIndex(string inStockName){
-
-			foreach (Stock stock in this.stocks) {
-				if (stock.getStockName() == inStockName) {
-					return stock;
-				}
-			}
-			throw new StockExchangeException ("Stock doesn't exit");
+			return this.stocks [inStockName];
 		}
 
 		public void AddStockToIndex(Stock inStock){
-			// TODO:
+			string stockName = inStock.getStockName ();
 
-			this.stocks.Add (inStock);
+			if (IsStockPartOfIndex(stockName)){
+				throw new StockExchangeException ("Stock already in Index!");
+			}
+
+			this.stocks.Add (stockName, inStock);
 		}
 
 		public void RemoveStockFromIndex(string inStockName) //briše dionicu iz indeksa
 		{
-			this.stocks.Remove (getStockFromIndex (inStockName));
+			if (IsStockPartOfIndex (inStockName)) {
+				this.stocks.Remove (inStockName);	
+			} else {
+				throw new StockExchangeException ("Stock not in Index!");
+			}
+
 		}
 
 		public bool IsStockPartOfIndex(string inStockName){
-			try {
-				getStockFromIndex(inStockName);
-				return true;
-			} catch (StockExchangeException){
-				return false;
-			}
+			return this.stocks.ContainsKey (inStockName);
 
 		}
 
@@ -155,9 +160,13 @@ namespace DrugaDomacaZadaca_Burza
 			return this.stocks.Count ();
 		}
 
-		abstract public decimal GetIndexValue (DateTime inTimeStamp, Dictionary <Stock, long> stockInStockExchange);
+		abstract public decimal GetIndexValue (DateTime inTimeStamp, decimal stockExchangeValue);
 	}
 
+
+	/// <summary>
+	/// Weighted stock index.
+	/// </summary>
 	public class WeightedStockIndex : StockIndex
 	{
 
@@ -165,46 +174,31 @@ namespace DrugaDomacaZadaca_Burza
 			this.indexType = IndexTypes.WEIGHTED;
 		}
 
-		public override decimal GetIndexValue(DateTime inTimeStamp, Dictionary <Stock, long> stockInStockExchange){
+		public override decimal GetIndexValue(DateTime inTimeStamp, decimal stockExchangeValue){
 			decimal totalIndexValue = 0;
-			decimal stockShareValue = 0;
-			decimal numberOfStockSharesInStockExchange = 0;
-			decimal valueOfStockExchange = 0;
+			decimal stockShare = 0;
 			decimal stockPrice = 0;
 
 			if (this.NumberOfStocksInIndex() == 0){
 				return totalIndexValue;
 			}
 
+			foreach (var stock in this.stocks) {
+				stockPrice = stock.Value.GetStockPrice(inTimeStamp);
 
-			foreach (Stock stock in stockInStockExchange.Keys) {
-				numberOfStockSharesInStockExchange = Convert.ToDecimal (stockInStockExchange [stock]);
-				stockPrice = stock.GetStockPrice (inTimeStamp);
+				stockShare = (stockPrice * stock.Value.getStockQuantity()) / stockExchangeValue;
 
-				valueOfStockExchange += stockPrice * numberOfStockSharesInStockExchange;
-			}
-
-
-			foreach (Stock stock in this.stocks) {
-				numberOfStockSharesInStockExchange = Convert.ToDecimal (stockInStockExchange [stock]);
-				stockPrice = stock.GetStockPrice (inTimeStamp);
-
-				stockShareValue = stockPrice * numberOfStockSharesInStockExchange;
-				totalIndexValue += (stockPrice * weightOfStock(stockShareValue, valueOfStockExchange));
+				totalIndexValue += (stockPrice * stockShare);
 			}
 
 			return Decimal.Round(totalIndexValue, 3);
 		}
-
-		private decimal weightOfStock(decimal stockShareValue, decimal valueOfStockExchange){
-			decimal weight = 0;
-
-			weight = stockShareValue / valueOfStockExchange;
-
-			return weight;
-		}
 	}
 
+
+	/// <summary>
+	/// Average stock index.
+	/// </summary>
 	public class AverageStockIndex: StockIndex
 	{
 
@@ -212,35 +206,38 @@ namespace DrugaDomacaZadaca_Burza
 			this.indexType = IndexTypes.AVERAGE;
 		}
 
-		public override decimal GetIndexValue(DateTime inTimestamp, Dictionary <Stock, long> stocksInStockExchange){
+		public override decimal GetIndexValue(DateTime inTimestamp, decimal stockExchangeValue){
 			decimal totalIndexValue = 0;
 			decimal numberOfStocks = Convert.ToDecimal(this.NumberOfStocksInIndex ());
 
 			if (this.NumberOfStocksInIndex() == 0){
 				return totalIndexValue;
 			}
-			
-			foreach (Stock stock in this.stocks) {
-				totalIndexValue += stock.GetStockPrice (inTimestamp);
+
+			foreach (var stock in this.stocks) {
+				totalIndexValue += stock.Value.GetStockPrice (inTimestamp);
 			}
 
 			return Decimal.Round(totalIndexValue / numberOfStocks, 3) ; 
 		}
 	}
-	
 
-
+	/// <summary>
+	/// Portfolio.
+	/// </summary>
 	public class Portfolio
 	{
-		string portfolioId;
-		Dictionary<Stock, Int32> stocks;
+		private string portfolioId;
+		private Dictionary<string, Stock> stocksInPortfolio;
+		private Dictionary<string, int> stockShares;
 
 		public Portfolio(string inPortfolioID){
-			if (inPortfolioID == "\0") {
+			if (inPortfolioID == null) {
 				throw new StockExchangeException ("Portforlio must have a name");
 			}
 
-			this.stocks = new Dictionary<Stock, int> ();
+			this.stockShares = new Dictionary<string, int> ();
+			this.stocksInPortfolio = new Dictionary<string, Stock> ();
 			this.portfolioId = inPortfolioID;
 
 		} //stvara novi portfelj na burzi
@@ -250,28 +247,31 @@ namespace DrugaDomacaZadaca_Burza
 		}
 
 		private Stock getStockFromPortfolio(string inStockName){
-			foreach (Stock stock in this.stocks.Keys) {
-				if (stock.getStockName () == inStockName)
-					return stock;
-			}
-			throw new StockExchangeException ("Stock doesn't exist in Portfolio");
+			return stocksInPortfolio [inStockName];
 		}
 
 		public void AddStockToPortfolio(Stock stock, int numberOfShares){
+			string stockName = stock.getStockName ();
+
 			if (numberOfShares <= 0) {
 				throw new StockExchangeException ("Number of shares must be grather than 0");
 			}
-			// assert stock?? TODO
 
-			if (this.IsStockPartOfPortfolio(stock.getStockName())){
-				this.stocks[stock] += numberOfShares;
+			if (this.IsStockPartOfPortfolio(stockName)){
+				this.stockShares [stockName] += numberOfShares;
+
 			} else {
-				this.stocks.Add (stock, numberOfShares);
+				this.stocksInPortfolio.Add (stockName, stock);
+				this.stockShares.Add (stockName, numberOfShares);
+
 			}
 
 		}
 		public void RemoveStockFromPortfolio(string inStockName, int numberOfShares){
-			if (this.IsStockPartOfPortfolio (inStockName) == false) {}
+
+			if (this.IsStockPartOfPortfolio (inStockName) == false) {
+				throw new StockExchangeException ("Stock not in Portfolio!");
+			}
 
 			if (this.NumberOfSharesOfStockInPortfolio (inStockName) < numberOfShares) {
 				throw new StockExchangeException ("Not enough shares.");
@@ -280,55 +280,50 @@ namespace DrugaDomacaZadaca_Burza
 				this.RemoveStockFromPortfolio (inStockName);
 
 			} else {
-				Stock stock = getStockFromPortfolio (inStockName);
-				this.stocks [stock] -= numberOfShares;
+				this.stockShares [inStockName] -= numberOfShares;
 			}
 		}
 
 		public void RemoveStockFromPortfolio(string inStockName){
-			Stock stock = getStockFromPortfolio (inStockName);
-			this.stocks.Remove (stock);
+			
+			if (this.IsStockPartOfPortfolio (inStockName) == false) {
+				throw new StockExchangeException ("Stock not in Portfolio!");
+			}
+
+			this.stockShares.Remove (inStockName);
+			this.stocksInPortfolio.Remove (inStockName);
 		}
 
 
 		public bool IsStockPartOfPortfolio(string inStockName){
-			try {
-				getStockFromPortfolio(inStockName);
-				return true;
-
-			} catch (StockExchangeException){
-				return false;
-			}
+			return this.stocksInPortfolio.ContainsKey (inStockName);
 
 		} //provjerava nalazi li se dionica u portfelju
 
 		public int NumberOfStocksInPorfolio(){
-			return this.stocks.Count;
+			return this.stocksInPortfolio.Count ();
 		}
 
 
 		public int NumberOfSharesOfStockInPortfolio(string inStockName){
-			int numberOfStocksInPorfolio = 0;
-
-			if (this.IsStockPartOfPortfolio (inStockName)) {
-				Stock stock = this.getStockFromPortfolio (inStockName);
-
-				numberOfStocksInPorfolio = Convert.ToInt32 (this.stocks [stock]);
+			int stockShares = 0;
+			if (IsStockPartOfPortfolio(inStockName) == false) {
+				return stockShares;
 			}
+			return this.stockShares[inStockName];
 
-			return numberOfStocksInPorfolio;
 
 		}//dohvaća broj dionice u traženom portfelj
 
 		public Decimal GetPortfolioValue(DateTime timeStamp){
 			decimal portfolioValue = 0;
-			foreach (Stock stock in this.stocks.Keys) {
-				portfolioValue += (this.NumberOfSharesOfStockInPortfolio (stock.getStockName()) 
-				                   	* stock.GetStockPrice (timeStamp));
+			foreach (var stock in this.stocksInPortfolio) {
+				portfolioValue += (this.NumberOfSharesOfStockInPortfolio (stock.Key) 
+				                   * stock.Value.GetStockPrice (timeStamp));
 			}
 
 			return portfolioValue;
-		}//dohvaća vrijednost portfelja u određenom trenutku
+		}//dohvaća vrijednost portfelja u određenom trenutku TODO: sto ako neka dionica nije postojala tada (treutno baca Exception)
 
 		public Decimal GetPortfolioPercentChangeInValueForMonth(int Year, int Month){
 			DateTime firstDayOfCurrentMonth;
@@ -338,7 +333,7 @@ namespace DrugaDomacaZadaca_Burza
 				firstDayOfCurrentMonth = new DateTime (Year, Month, 1);
 				firstDayOfNextMonth = firstDayOfCurrentMonth.AddMonths (1);
 
-			} catch (Exception e){
+			} catch (Exception){
 				throw new StockExchangeException ("Improper date");
 			}
 
@@ -355,18 +350,28 @@ namespace DrugaDomacaZadaca_Burza
 
 		} //dohvaća mjeseću promjenu vrijednosti portfelja
 	}
-	
 
+
+
+
+
+	/// <summary>
+	/// 
+	/// 
+	/// </summary>
 	public class StockExchange : IStockExchange
 	{
-		private List<StockIndex> stockIndexes;
-		private List<Portfolio> portfolios;
-		private Dictionary<Stock, long> stocks;
+		private Dictionary<string, Stock> stocks;
+		private Dictionary<string, int> soldStocks;
+		private Dictionary<string, StockIndex> stockIndexes;
+		private Dictionary<string, Portfolio> portfolios;
+
 
 		public StockExchange (){
-			this.stockIndexes = new List<StockIndex> ();
-			this.stocks = new Dictionary<Stock, long> ();
-			this.portfolios = new List<Portfolio> ();
+			this.stockIndexes = new Dictionary<string, StockIndex> ();
+			this.stocks = new Dictionary<string, Stock> ();
+			this.soldStocks = new Dictionary<string, int> ();
+			this.portfolios = new Dictionary<string, Portfolio> ();
 		}
 
 
@@ -377,81 +382,92 @@ namespace DrugaDomacaZadaca_Burza
 
 		private DateTime roundTimestamp(DateTime timestamp){
 			int ticksInMillisecond = 10000;
+			DateTime roundedTS = new DateTime( timestamp.Ticks / ticksInMillisecond * ticksInMillisecond );
 
-			return DateTime( timestamp.Ticks / ticksInMillisecond * ticksInMillisecond );
+			return roundedTS;
+		}
+
+		private decimal getStockExchangeValue(DateTime timestamp){
+			decimal totalValue = 0;
+			DateTime roundedTimestamp = roundTimestamp (timestamp);
+
+			foreach (var stock in this.stocks.Values) {
+				totalValue += stock.GetStockPrice(roundedTimestamp) * stock.getStockQuantity();
+			}
+
+			return totalValue;
 		}
 
 		public void ListStock(string inStockName, long inNumberOfShares, decimal inInitialPrice, DateTime inTimeStamp)
 		{
-			if (StockExists(inStockName)) {
+			string unifiedName = unifyName (inStockName);
+
+			if (StockExists(unifiedName)) {
 				throw new StockExchangeException ("Stock already in the StockExchange");
 			}
 
-			if (inNumberOfShares <= 0) {
-				throw new StockExchangeException ("Number of shares must be positiv.");
-			}
-
-			Stock newStock = new Stock (inStockName, inInitialPrice, inTimeStamp);
-			this.stocks.Add (newStock, inNumberOfShares); // TODO: must be >0
+			Stock newStock = new Stock (unifiedName, inNumberOfShares, inInitialPrice, roundTimestamp(inTimeStamp));
+			this.stocks.Add (unifiedName, newStock);
+			this.soldStocks.Add (unifiedName, 0);
 		}
 
 		public void DelistStock(string inStockName)
 		{
-			inStockName = inStockName.ToUpper ();
+			string unifiedName = unifyName (inStockName);
 
-			foreach (StockIndex stockIndex in this.stockIndexes) {
-				if (stockIndex.IsStockPartOfIndex (inStockName)) {
-					stockIndex.RemoveStockFromIndex (inStockName);
+			if (StockExists (inStockName) == false) {
+				throw new StockExchangeException ("Stock not in the StockExchange");
+			}
+
+			foreach (var stockIndex in this.stockIndexes) {
+				if (stockIndex.Value.IsStockPartOfIndex (unifiedName)) {
+					stockIndex.Value.RemoveStockFromIndex (unifiedName);
 				}
 			}
 
-			foreach (Portfolio portfolio in this.portfolios) {
-				if (portfolio.IsStockPartOfPortfolio (inStockName)) {
-					portfolio.RemoveStockFromPortfolio (inStockName);
+			foreach (var portfolio in this.portfolios) {
+				if (portfolio.Value.IsStockPartOfPortfolio (unifiedName)) {
+					portfolio.Value.RemoveStockFromPortfolio (unifiedName);
 				}
 			}
 
-			this.stocks.Remove (getStockFromStockExchange (inStockName) );
+			this.stocks.Remove (unifiedName);
+			this.stocks.Remove (unifiedName);
+
 		}
 
 		public bool StockExists(string inStockName)
 		{
-			inStockName = inStockName.ToUpper ();
+			string unifiedName = unifyName (inStockName);
 
-			foreach (Stock stock in this.stocks.Keys) {
-				if (stock.getStockName() == inStockName) {
-					return true;
-				}
-			}
-
-			return false;
+			return this.stocks.ContainsKey (unifiedName);
 		}
 
 		private Stock getStockFromStockExchange(string inStockName){
-			foreach (Stock stock in this.stocks.Keys) {
-				if (stock.getStockName() == inStockName) {
-					return stock;
-				}
+			string unifiedName = unifyName (inStockName);
+
+			if (StockExists (unifiedName) == false) {
+				throw new StockExchangeException ("Stock doesn't exits");
 			}
-			throw new StockExchangeException ("Stock doesn't exit");
+
+			return this.stocks[unifiedName];
 		}
 
 		private StockIndex getStockIndexFromStockExchange(string inStockIndexName){
-			foreach (StockIndex stockIndex in this.stockIndexes) {
-				if (stockIndex.getStockIndexName() == inStockIndexName) {
-					return stockIndex;
-				}
+			if (IndexExists (inStockIndexName) == false) {
+				throw new StockExchangeException ("StockIndex doesn't exits");
 			}
-			throw new StockExchangeException ("StockIndex doesn't exit");
+
+			return this.stockIndexes[inStockIndexName];
 		}
 
 		private Portfolio getPortfolioFromStockExchange(string inPortfolioName){
-			foreach (Portfolio portfolio in this.portfolios) {
-				if (portfolio.getPortfolioName() == inPortfolioName) {
-					return portfolio;
-				}
+			if (PortfolioExists (inPortfolioName) == false) {
+				throw new StockExchangeException ("Portfolio doesn't exits");
 			}
-			throw new StockExchangeException ("Portfolio doesn't exit");
+
+			return this.portfolios[inPortfolioName];
+
 		}
 
 		public int NumberOfStocks()
@@ -460,107 +476,127 @@ namespace DrugaDomacaZadaca_Burza
 		}
 
 		public int NumberOfSharesOfStocksInStockExchange(string inStockName){
-			inStockName = inStockName.ToUpper ();
+			string unifiedName = unifyName(inStockName);
 
-			Stock stock = getStockFromStockExchange (inStockName);
-			
-			return Convert.ToInt32(this.stocks [stock]);
+			Stock stock = getStockFromStockExchange(unifiedName);
+			return Convert.ToInt32(stock.getStockQuantity ());
 		}
 
 		public void SetStockPrice(string inStockName, DateTime inTimeStamp, decimal inStockValue)
 		{
-			inStockName = inStockName.ToUpper ();
-			Stock stock = getStockFromStockExchange (inStockName);
-			stock.SetStockPrice (inTimeStamp, inStockValue);
+			string unifiedName = unifyName(inStockName);
+			DateTime roundedTS = roundTimestamp (inTimeStamp);
+
+			Stock stock = getStockFromStockExchange (unifiedName);
+			stock.SetStockPrice (roundedTS, inStockValue);
+
 		}
 
 		public decimal GetStockPrice(string inStockName, DateTime inTimeStamp)
-		{
-			inStockName = inStockName.ToUpper ();
-			Stock stock = getStockFromStockExchange (inStockName);
-			return stock.GetStockPrice(inTimeStamp) ;
+		{	
+			string unifiedName = unifyName(inStockName);
+			DateTime roundedTS = roundTimestamp (inTimeStamp);
+
+			Stock stock = getStockFromStockExchange(unifiedName);
+			return stock.GetStockPrice (roundedTS);
+
+
 		}
 
 		public decimal GetInitialStockPrice(string inStockName)
 		{
-			inStockName = inStockName.ToUpper ();
+			string unifiedName = unifyName(inStockName);
 
-			Stock stock = getStockFromStockExchange (inStockName);
+			Stock stock = getStockFromStockExchange(unifiedName);
 			return stock.GetInitialStockPrice ();
+
 		}
 
 		public decimal GetLastStockPrice(string inStockName)
 		{
-			inStockName = inStockName.ToUpper (); // TODO create a function
+			string unifiedName = unifyName(inStockName);
 
-			Stock stock = getStockFromStockExchange (inStockName);
+			Stock stock = getStockFromStockExchange(unifiedName);
+
 			return stock.GetLastStockPrice ();
+
 		}
 
 		public void CreateIndex(string inIndexName, IndexTypes inIndexType)
 		{
 			StockIndex stockIndex;
+			string unifiedName = unifyName (inIndexName);
 
-			if (IndexExists (inIndexName)) {
+			if (IndexExists (unifiedName)) {
 				throw new StockExchangeException ("Index with that name already exist!");
 			}
 
 			switch (inIndexType) {
-			case (IndexTypes.AVERAGE):
-				stockIndex = new AverageStockIndex (inIndexName);
-				break;
-			
-			case (IndexTypes.WEIGHTED):
-				stockIndex = new WeightedStockIndex (inIndexName);
+				case (IndexTypes.AVERAGE):
+				stockIndex = new AverageStockIndex (unifiedName);
 				break;
 
-			default:
+				case (IndexTypes.WEIGHTED):
+				stockIndex = new WeightedStockIndex (unifiedName);
+				break;
+
+				default:
 				throw new StockExchangeException ("Index Type doeesn't exist!");
-			
+
 			}
 
-			this.stockIndexes.Add (stockIndex);
+			this.stockIndexes.Add (unifiedName, stockIndex);
 		}
 
 		public void AddStockToIndex(string inIndexName, string inStockName)
 		{
-			StockIndex stockIndex = getStockIndexFromStockExchange (inIndexName);
-			Stock stock = getStockFromStockExchange (inStockName);
+			string unifiedName = unifyName (inStockName);
+			string unifiedIndexName = unifyName (inIndexName);
+			StockIndex stockIndex;
+			Stock stock;
 
-			if (stockIndex.IsStockPartOfIndex (inStockName)) {
-				throw new StockExchangeException ("Stock is already in Index.");
-			}
+
+			stock = getStockFromStockExchange (unifiedName);
+			stockIndex = getStockIndexFromStockExchange (unifiedIndexName);
 
 			stockIndex.AddStockToIndex (stock);
 		}
 
 		public void RemoveStockFromIndex(string inIndexName, string inStockName)
 		{
-			StockIndex stockIndex = getStockIndexFromStockExchange (inIndexName);
-			stockIndex.RemoveStockFromIndex (inStockName);
+			StockIndex stockIndex;
+			string unifiedIndexName = unifyName (inIndexName);
+			string unifiedName = unifyName (inStockName);
+
+			stockIndex = getStockIndexFromStockExchange (unifiedIndexName);
+
+
+			stockIndex.RemoveStockFromIndex (unifiedName);
 		}
 
 		public bool IsStockPartOfIndex(string inIndexName, string inStockName)
 		{
-			StockIndex stockIndex = getStockIndexFromStockExchange (inIndexName);
-			return stockIndex.IsStockPartOfIndex (inStockName);
+			string unifiedName = unifyName (inStockName);
+			string unifiedIndexName = unifyName (inIndexName);
+
+			StockIndex stockIndex = getStockIndexFromStockExchange (unifiedIndexName);
+			return stockIndex.IsStockPartOfIndex (unifiedName);
 
 		}
 
 		public decimal GetIndexValue(string inIndexName, DateTime inTimeStamp)
 		{
-			StockIndex stockIndex = getStockIndexFromStockExchange (inIndexName);
-			return stockIndex.GetIndexValue (inTimeStamp, this.stocks);
+			DateTime roundedTS = roundTimestamp (inTimeStamp);
+			string unifiedIndexName = unifyName (inIndexName);
+			StockIndex stockIndex = getStockIndexFromStockExchange (unifiedIndexName);
+
+			return stockIndex.GetIndexValue (roundedTS, getStockExchangeValue(roundedTS));
 		}
 
 		public bool IndexExists(string inIndexName)
 		{	
-			foreach (StockIndex stockIndex in this.stockIndexes) {
-				if (stockIndex.getStockIndexName().ToUpper() == inIndexName.ToUpper()) {
-					return true;
-				}
-			}
-			return false;
+			string unifiedIndexName = unifyName (inIndexName);
+			return this.stockIndexes.ContainsKey (unifiedIndexName);
 		}
 
 		public int NumberOfIndices()
@@ -570,7 +606,8 @@ namespace DrugaDomacaZadaca_Burza
 
 		public int NumberOfStocksInIndex(string inIndexName)
 		{
-			StockIndex stockIndex = getStockIndexFromStockExchange (inIndexName);
+			string unifiedIndexName = unifyName (inIndexName);
+			StockIndex stockIndex = getStockIndexFromStockExchange (unifiedIndexName);
 			return stockIndex.NumberOfStocksInIndex ();
 		}
 
@@ -581,34 +618,48 @@ namespace DrugaDomacaZadaca_Burza
 			}
 
 			Portfolio portfolio = new Portfolio (inPortfolioID);
-			this.portfolios.Add (portfolio);
+			this.portfolios.Add (inPortfolioID, portfolio);
 		}
 
 		public void AddStockToPortfolio(string inPortfolioID, string inStockName, int numberOfShares)
 		{
 			Portfolio portfolio = this.getPortfolioFromStockExchange (inPortfolioID);
-			Stock stock = getStockFromStockExchange (inStockName);
+			string unifiedName = unifyName (inStockName);
+			Stock stock = getStockFromStockExchange (unifiedName);
+			int stocksSharesSold = 0;
 
-			int sharesToAdd = numberOfShares;
-			if (portfolio.NumberOfSharesOfStockInPortfolio (inStockName) + numberOfShares > Convert.ToInt32 (this.stocks [stock])) {
-				sharesToAdd = Convert.ToInt32(this.stocks[stock]) - portfolio.NumberOfSharesOfStockInPortfolio (inStockName);
+			if (this.soldStocks.ContainsKey (unifiedName)) {
+				stocksSharesSold = this.soldStocks [unifiedName];
+			} else {
+				this.soldStocks.Add (unifiedName, stocksSharesSold); 
 			}
-			 
-			portfolio.AddStockToPortfolio (stock, sharesToAdd);
+
+			if (stocksSharesSold + numberOfShares  > Convert.ToInt32(stock.getStockQuantity()) ){
+				throw new StockExchangeException("Not enough stocks");
+			}
+
+			portfolio.AddStockToPortfolio(stock, numberOfShares);
+			this.soldStocks [unifiedName] += numberOfShares;
 		}
 
 		public void RemoveStockFromPortfolio(string inPortfolioID, string inStockName, int numberOfShares)
 		{
 			Portfolio portfolio = this.getPortfolioFromStockExchange (inPortfolioID);
+			string unifiedName = unifyName (inStockName);
 
-			portfolio.RemoveStockFromPortfolio (inStockName, numberOfShares);
+			portfolio.RemoveStockFromPortfolio (unifiedName, numberOfShares);
+			this.soldStocks [unifiedName] += numberOfShares;
 		}
 
 		public void RemoveStockFromPortfolio(string inPortfolioID, string inStockName)
 		{
 			Portfolio portfolio = this.getPortfolioFromStockExchange (inPortfolioID);
+			string unifiedName = unifyName (inStockName);
 
-			portfolio.RemoveStockFromPortfolio (inStockName);
+			int stocksToRemove = portfolio.NumberOfSharesOfStockInPortfolio (unifiedName);
+			portfolio.RemoveStockFromPortfolio (unifiedName);
+			this.soldStocks [unifiedName] += stocksToRemove;
+
 		}
 
 		public int NumberOfPortfolios()
@@ -624,31 +675,29 @@ namespace DrugaDomacaZadaca_Burza
 
 		public bool PortfolioExists(string inPortfolioID)
 		{
-			try {
-				getPortfolioFromStockExchange(inPortfolioID);
-				return true;
-
-			} catch (StockExchangeException) {
-				return false;
-			}
+			return this.portfolios.ContainsKey (inPortfolioID);
 		}
 
 		public bool IsStockPartOfPortfolio(string inPortfolioID, string inStockName)
 		{
 			Portfolio portfolio = this.getPortfolioFromStockExchange (inPortfolioID);
-			return portfolio.IsStockPartOfPortfolio (inStockName);
+			string unifiedName = unifyName (inStockName);
+			return portfolio.IsStockPartOfPortfolio (unifiedName);
 		}
 
 		public int NumberOfSharesOfStockInPortfolio(string inPortfolioID, string inStockName)
 		{
 			Portfolio portfolio = this.getPortfolioFromStockExchange (inPortfolioID);
-			return portfolio.NumberOfSharesOfStockInPortfolio (inStockName);
+			string unifiedName = unifyName (inStockName);
+			return portfolio.NumberOfSharesOfStockInPortfolio (unifiedName);
 		}
 
 		public decimal GetPortfolioValue(string inPortfolioID, DateTime timeStamp)
 		{
 			Portfolio portfolio = this.getPortfolioFromStockExchange (inPortfolioID);
-			return portfolio.GetPortfolioValue (timeStamp);
+			DateTime roundedTS = roundTimestamp (timeStamp);
+
+			return portfolio.GetPortfolioValue (roundedTS);
 		}
 
 		public decimal GetPortfolioPercentChangeInValueForMonth(string inPortfolioID, int Year, int Month)
